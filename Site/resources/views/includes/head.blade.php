@@ -8,10 +8,11 @@
 <title>{{ config('app.name', 'Project Web-UX') }}</title>
 
 <!-- Styles -->
-<link href="/css/normalize.css" rel="stylesheet">    
-<link href="/css/app.css" rel="stylesheet">
+<link href="/css/normalize.css" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
 <link href="/css/bootstrap-material-design.css" rel="stylesheet">
-<link href="/css/ripples.css" rel="stylesheet">
+<link href="/css/ripples.css" rel="stylesheet">   
+<link href="/css/app.css" rel="stylesheet">
 
 <!-- Scripts -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
