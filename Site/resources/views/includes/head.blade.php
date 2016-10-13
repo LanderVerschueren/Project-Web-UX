@@ -10,6 +10,7 @@
 <!-- Styles -->
 <link href="/css/normalize.css" rel="stylesheet"> 
 <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="/css/hover.css">
 <link href="/css/bootstrap-material-design.css" rel="stylesheet">
 <link href="/css/ripples.css" rel="stylesheet">   
 <link href="/css/app.css" rel="stylesheet">

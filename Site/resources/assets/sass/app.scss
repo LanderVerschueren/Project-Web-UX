@@ -23,8 +23,9 @@ footer {
 #app {
 	overflow: hidden;
 	height: 100%;
+
 	display: flex;
-	flex-direction: row;
+	flex-flow: row wrap;
 
 	flex: 11;
 }
@@ -33,35 +34,58 @@ footer {
 	padding: 5%;
 	flex: 1;
 	border-right: 5px solid;
-	background: #B22E26;
 
-	display: flex;
-	align-items: flex-start;
+	background-image: url('/img/groenten.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: bottom;
 }
 
 .container-left a {
 	width: 100%;
 	height: 100%;
+	padding: 5%;
+
+	background: rgba(0, 0, 0, 0.6);
+
+	display: flex;
+	align-items: flex-start;
+}
+
+.container-left a:hover {
+	text-decoration: none;
 }
 
 .container-left a h1 {
 	font-family: 'Inconsolata', monospace;
 	color: white;
+	margin: 0;
 }
 
 .container-right {
 	padding: 5%;
 	flex: 1;
 	border-left: 5px solid;
-	background: #35B266;
 
-	display: flex;
-	align-items: flex-end;
+	background-image: url('/img/fruit.jpeg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: bottom;
 }
 
 .container-right a {
 	width: 100%;
 	height: 100%;
+	padding: 5%;
+
+	background: rgba(0, 0, 0, 0.6);
+
+	display: flex;
+	align-items: flex-end;
+}
+
+.container-right a:hover {
+	text-decoration: none;
 }
 
 .container-right a h1 {
@@ -75,6 +99,7 @@ footer {
 
 footer {
 	text-align: center;
+	background: rgba(0, 0, 0, 0);
 }
 
 // Fonts
