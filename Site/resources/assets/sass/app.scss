@@ -11,6 +11,10 @@ body {
 
 .container_nav {
 	flex: 2;
+	background: black;
+
+	display: flex;
+	flex-direction: column;
 }
 
 .container_content {
