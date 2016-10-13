@@ -11,6 +11,6 @@ class KoopController extends Controller
     //
     public function index()
     {
-        return view('aankoop.index');
+        return view('pages.buy');
     }
 }

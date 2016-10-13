@@ -11,6 +11,6 @@ class VerkoopController extends Controller
     //
     public function index()
     {
-        return view('verkoop.index');
+        return view('pages.offer');
     }
 }
