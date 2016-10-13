@@ -5,11 +5,13 @@
 </head>
 <body>
 
-    @include('includes.nav2')
-    <div id="app">
-            
+    <div class="container_nav">
+        @include('includes.nav2')
+    </div>
+    <div class="container_content">
+        <div id="app">
             @yield('content')
-            
+        </div>
     </div>
     
     <footer>
