@@ -18,10 +18,11 @@ class CreateUsersTable extends Migration
             $table->string('voornaam');
             $table->string('achternaam');
             $table->string('email')->unique();
-            $table->string('passwoord');
+            $table->string('password');
             $table->string('adres');
             $table->string('woonplaats');
             $table->string('postcode');
+            $table->softDeletes();
             $table->rememberToken();
             $table->timestamps();
         });
