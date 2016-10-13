@@ -6,18 +6,15 @@ html,body {
 body {
 	display: flex;
 	min-height: 100vh;
-	flex-direction: column;
+	flex-direction: row;
 }
 
-.navbar {
-	margin-bottom: 0!important;
-	border: none!important;
-	border-radius: 0!important;
+.container_nav {
+	flex: 2;
 }
 
-footer {
-	height: 20px;
-	flex: 1;
+.container_content {
+	flex: 10;
 }
 
 #app {

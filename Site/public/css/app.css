@@ -8,19 +8,17 @@ body {
   display: -webkit-box;
   display: flex;
   min-height: 100vh;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  flex-direction: column; }
+  flex-direction: row; }
 
-.navbar {
-  margin-bottom: 0 !important;
-  border: none !important;
-  border-radius: 0 !important; }
+.container_nav {
+  -webkit-box-flex: 2;
+  flex: 2; }
 
-footer {
-  height: 20px;
-  -webkit-box-flex: 1;
-  flex: 1; }
+.container_content {
+  -webkit-box-flex: 10;
+  flex: 10; }
 
 #app {
   overflow: hidden;
