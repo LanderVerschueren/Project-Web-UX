@@ -12,15 +12,12 @@ body {
 .container_nav {
 	flex: 2;
 
-	padding-top: 5%;
-	padding-bottom: 5%;
-	background-color: darken(#F5F8FA, 50%);
+	padding: 5% 1% 5% 1%;
+	background-color: white;
 }
 
 .navigation {
 	height: 100%;
-
-	border-right: 1px gray solid;
 
 	display: flex;
 	flex-direction: column;
@@ -56,6 +53,7 @@ body {
 	flex: 10;
 	
 	padding: 5%;
+	box-shadow:-2px 0px 15px 0px rgba(#13232f,.3);
 }
 
 .search {
