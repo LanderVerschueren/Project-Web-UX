@@ -12,6 +12,7 @@
 <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
 <link href="/css/bootstrap-material-design.css" rel="stylesheet">
 <link href="/css/ripples.css" rel="stylesheet">
+<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
 <link href="/css/app.css" rel="stylesheet">
 
 <!-- Scripts -->

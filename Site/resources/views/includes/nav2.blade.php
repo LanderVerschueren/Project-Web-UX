@@ -1,45 +1,22 @@
-<div class="navbar">
-	<div class="container-fluid">
-		<div class="navbar-header">
-			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			</button>
-			<a class="navbar-brand" href="{{ url('/') }}">{{ config('app.name', 'Project Web-UX') }}</a>
-		</div>
-		<div class="navbar-collapse collapse navbar-responsive-collapse">
-			<ul class="nav navbar-nav">
-				<li class="active"><a href="{{ url('/') }}">Home</a></li>
-			</ul>
-			<ul class="nav navbar-nav navbar-right">
-				<!-- Authentication Links -->
-				@if (Auth::guest())
-				<li><a href="{{ url('/login') }}">Inloggen</a></li>
-				<li class=""><a href="{{ url('/register') }}">Registreren</a></li>
-				@else
-				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-						{{ Auth::user()->name }} <span class="caret"></span>
-					</a>
+<!-- Menu toggle -->
+<a href="#menu" id="menuLink" class="menu-link">
+    <!-- Hamburger icon -->
+    <span></span>
+</a>
 
-					<ul class="dropdown-menu" role="menu">
-						<li>
-							<a href="{{ url('/logout') }}"
-							onclick="event.preventDefault();
-							document.getElementById('logout-form').submit();">
-							Logout
-						</a>
+<div id="menu">
+    <div class="pure-menu">
+        <a class="pure-menu-heading" href="#">Company</a>
 
-						<form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
-							{{ csrf_field() }}
-						</form>
-						</li>
-					</ul>
-				</li>
-				@endif
-			</ul>
-		</div>
-	</div>
+        <ul class="pure-menu-list">
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Home</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">About</a></li>
+
+            <li class="pure-menu-item" class="menu-item-divided pure-menu-selected">
+                <a href="#" class="pure-menu-link">Services</a>
+            </li>
+
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Contact</a></li>
+        </ul>
+    </div>
 </div>
-
