@@ -18,4 +18,9 @@ class VerkoopController extends Controller
     {
         return view('pages.offer');
     }
+
+    public function nieuw()
+    {
+        return view('pages.nieuw');
+    }
 }

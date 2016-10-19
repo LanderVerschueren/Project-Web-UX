@@ -13,7 +13,7 @@
                             @endforeach
                         @else
                             <h2>Je hebt nog geen offers toegevoegd</h2>
-                            <a href="">voeg een nieuw offer toe</a>
+                            <a href="\nieuw">voeg een nieuw offer toe</a>
                         @endif
                     </div>
                 </div>
