@@ -1,5 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-    <p>Verkooppagina</p>
+    <div class="filter">Filter</div>
+    <div class="offers">Offers</div>
 @endsection
