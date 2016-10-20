@@ -19,7 +19,9 @@
     </div>
 
     <div class="content">
-        <div style="margin: 2px;">Test</div>
+        <div id="app">
+            @yield('content')
+        </div>
     </div>
   </div>
 </div>
