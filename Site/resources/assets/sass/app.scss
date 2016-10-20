@@ -321,6 +321,7 @@ Hides the menu at `48em`, but modify this based on your app's needs.
   }
   #menu {
     left: 150px;
+    margin-left: -150px;
   }
   .menu-link {
     position: fixed;
