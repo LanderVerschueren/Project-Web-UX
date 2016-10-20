@@ -6022,7 +6022,7 @@ appears on the left side of the page.
 #menu {
   margin-left: -150px;
   /* "#menu" width */
-  width: 200px;
+  width: 150px;
   position: fixed;
   top: 0;
   left: 0;
@@ -6143,11 +6143,11 @@ Hides the menu at `48em`, but modify this based on your app's needs.
     padding-left: 2em;
     padding-right: 2em; }
   #layout {
-    padding-left: 200px;
+    padding-left: 150px;
     /* left col width "#menu" */
     left: 0; }
   #menu {
-    left: 200px; }
+    left: 150px; }
   .menu-link {
     position: fixed;
     left: 150px;
@@ -6164,6 +6164,6 @@ Hides the menu at `48em`, but modify this based on your app's needs.
     */
   #layout.active {
     position: relative;
-    left: 200px; } }
+    left: 150px; } }
 
 /*# sourceMappingURL=app.css.map */
