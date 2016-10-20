@@ -12,77 +12,15 @@ body {
   -webkit-box-direction: normal;
   flex-direction: row; }
 
-.container_nav {
-  -webkit-box-flex: 2;
-  flex: 2;
-  padding: 5% 1% 5% 1%;
-  background-color: white; }
+#main {
+  height: 100% !important; }
 
-.navigation {
-  height: 100%;
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  flex-direction: column; }
+.header {
+  height: 20%; }
 
-.logo {
-  -webkit-box-flex: 1;
-  flex: 1;
-  text-align: center; }
-
-.logo a img {
-  width: 100%;
-  height: auto; }
-
-.user-info {
-  -webkit-box-flex: 3;
-  flex: 3;
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  align-items: center;
-  list-style-type: none; }
-
-.rest-info {
-  -webkit-box-flex: 8;
-  flex: 8; }
-
-.container_content {
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  flex-direction: column;
-  -webkit-box-flex: 10;
-  flex: 10;
-  padding: 5%;
-  box-shadow: -2px 0px 15px 0px rgba(19, 35, 47, 0.3); }
-
-.search {
-  display: block;
-  width: 100%;
-  height: 100px;
-  border-bottom: 1px black solid; }
-
-.search form input {
-  padding: 5px 5px 5px 20px;
-  border: 0;
-  width: 80%;
-  height: 50px;
-  float: left; }
-
-.search form button {
-  padding: 0;
-  border: 0;
-  width: 20%;
-  height: 50px;
-  float: right; }
+.content {
+  height: 80%;
+  margin-bottom: 0 !important; }
 
 #app {
   height: 100%;
@@ -90,7 +28,11 @@ body {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  flex-direction: row; }
+  flex-direction: row;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center; }
 
 .header form {
   max-width: 1200px;
@@ -107,83 +49,6 @@ body {
   border: none;
   width: 19%;
   height: 50px; }
-
-.container-left {
-  -webkit-box-flex: 1;
-  flex: 1;
-  border-right: 5px solid;
-  background-image: url("/img/groenten.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom; }
-
-.container-left:hover {
-  -webkit-animation: flexGrow 500ms ease forwards;
-  animation: flexGrow 500ms ease forwards; }
-
-@-webkit-keyframes flexGrow {
-  0% {
-    -webkit-box-flex: 1;
-    flex: 1; }
-  100% {
-    -webkit-box-flex: 2;
-    flex: 2; } }
-
-@keyframes flexGrow {
-  0% {
-    -webkit-box-flex: 1;
-    flex: 1; }
-  100% {
-    -webkit-box-flex: 2;
-    flex: 2; } }
-
-.container-left a {
-  width: 100%;
-  height: 100%;
-  padding: 5%;
-  background: rgba(0, 0, 0, 0.6);
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-align: start;
-  align-items: flex-start; }
-
-.container-left a:hover {
-  text-decoration: none; }
-
-.container-left a h1 {
-  font-family: 'Inconsolata', monospace;
-  color: white;
-  margin: 0; }
-
-.container-right {
-  -webkit-box-flex: 1;
-  flex: 1;
-  border-left: 5px solid;
-  background-image: url("/img/fruit.jpeg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom; }
-
-.container-right:hover {
-  -webkit-animation: flexGrow 500ms ease forwards;
-  animation: flexGrow 500ms ease forwards; }
-
-.container-right a {
-  width: 100%;
-  height: 100%;
-  padding: 5%;
-  background: rgba(0, 0, 0, 0.6);
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-align: end;
-  align-items: flex-end; }
-
-.container-right a:hover {
-  text-decoration: none; }
-
-.container-right a h1 {
-  font-family: 'Inconsolata', monospace;
-  color: white; }
 
 /*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)
@@ -6164,6 +6029,10 @@ Hides the menu at `48em`, but modify this based on your app's needs.
     */
   #layout.active {
     position: relative;
-    left: 150px; } }
+    left: 150px; }
+  #app {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column; } }
 
 /*# sourceMappingURL=app.css.map */
