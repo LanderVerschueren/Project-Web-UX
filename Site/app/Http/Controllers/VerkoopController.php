@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Offer;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Auth;
 use App\Http\Requests;
 
 class VerkoopController extends Controller
@@ -32,7 +32,7 @@ class VerkoopController extends Controller
         $offer->aantal = $request->input('aantal');
         $offer->prijs = $request->input('prijs');
         $offer->user_id = Auth::user()->id;
-        $offer->image = null;
+        $offer->foto = 'image1.png';
         $offer->save();
 
         return view('pages.offer');

@@ -9,7 +9,7 @@
                         @if(\App\Offer::all()->count() > 0)
                             <h2>Jou toegevoegde offers</h2>
                             @foreach(\App\Offer::all() as $offer)
-                                <p>1 offer</p>
+                                <p>{{ $offer->naam }}</p>
                             @endforeach
                         @else
                             <h2>Je hebt nog geen aanbiedingen toegevoegd</h2>
