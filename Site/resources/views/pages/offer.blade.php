@@ -12,7 +12,7 @@
                                 <p>1 offer</p>
                             @endforeach
                         @else
-                            <h2>Je hebt nog geen offers toegevoegd</h2>
+                            <h2>Je hebt nog geen aanbiedingen toegevoegd</h2>
                             <a href="\nieuw">voeg een nieuw offer toe</a>
                         @endif
                     </div>

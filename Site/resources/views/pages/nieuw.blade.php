@@ -6,7 +6,7 @@
             <div class="col-md-12">
                 <div class="panel panel-default">
                     <div class="panel-body">
-                        <form class="form-horizontal" role="form" method="POST" action="{{ url('/') }}">
+                        <form class="form-horizontal" role="form" method="POST" action="{{ url('/nieuw') }}">
                             {{ csrf_field() }}
 
                             <div class="form-group">
@@ -31,6 +31,20 @@
                                 <div class="col-md-6">
                                     <input id="prijs" type="integer" class="form-control" name="prijs" value="{{ old('prijs') }}" required>
                                 </div>
+                            </div>
+
+                            <div class="form-group" enctype="multipart/form-data">
+                                Select images to upload:
+                                <input type="file" name="foto1" id="foto1">
+                                <input type="submit" value="Upload Image" name="submit">
+
+
+                                <input type="file" name="foto2" id="foto2">
+                                <input type="submit" value="Upload Image" name="submit">
+
+
+                                <input type="file" name="foto3" id="foto3">
+                                <input type="submit" value="Upload Image" name="submit">
                             </div>
 
                             <div class="form-group">

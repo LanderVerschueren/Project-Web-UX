@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Offer;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -22,5 +23,18 @@ class VerkoopController extends Controller
     public function nieuw()
     {
         return view('pages.nieuw');
+    }
+
+    public function nieuwOffer(Request $request)
+    {
+        $offer = new Offer();
+        $offer->naam = $request->input('naam');
+        $offer->aantal = $request->input('aantal');
+        $offer->prijs = $request->input('prijs');
+        $offer->user_id = Auth::user()->id;
+        $offer->image = null;
+        $offer->save();
+
+        return view('pages.offer');
     }
 }

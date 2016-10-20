@@ -20,3 +20,6 @@ Route::get('/', 'HomeController@index');
 Route::get('/offer', 'VerkoopController@index');
 Route::get('/buy', 'KoopController@index');
 Route::get('/nieuw', 'VerkoopController@nieuw');
+
+
+Route::post('/nieuw', 'VerkoopController@nieuwOffer');
