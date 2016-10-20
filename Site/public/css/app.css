@@ -5841,11 +5841,11 @@ This is the parent `<div>` that contains the menu and the content area.
   width: 100%; }
 
 #layout.active #menu {
-  left: 150px;
-  width: 150px; }
+  left: 200px;
+  width: 200px; }
 
 #layout.active .menu-link {
-  left: 150px; }
+  left: 200px; }
 
 /*
 The content `<div>` is where all your content goes.
@@ -5885,9 +5885,9 @@ The `#menu` `<div>` is the parent `<div>` that contains the `.pure-menu` that
 appears on the left side of the page.
 */
 #menu {
-  margin-left: -150px;
+  margin-left: -200px;
   /* "#menu" width */
-  width: 150px;
+  width: 200px;
   position: fixed;
   top: 0;
   left: 0;
@@ -6008,7 +6008,7 @@ Hides the menu at `48em`, but modify this based on your app's needs.
     padding-left: 2em;
     padding-right: 2em; }
   #layout {
-    padding-left: 150px;
+    padding-left: 200px;
     /* left col width "#menu" */
     left: 0; }
   #menu {
@@ -6018,7 +6018,7 @@ Hides the menu at `48em`, but modify this based on your app's needs.
     left: 150px;
     display: none; }
   #layout.active .menu-link {
-    left: 150px; } }
+    left: 200px; } }
 
 @media (max-width: 48em) {
   /* Only apply this when the window is small. Otherwise, the following
@@ -6029,10 +6029,6 @@ Hides the menu at `48em`, but modify this based on your app's needs.
     */
   #layout.active {
     position: relative;
-    left: 150px; }
-  #app {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    flex-direction: column; } }
+    left: 200px; } }
 
 /*# sourceMappingURL=app.css.map */
