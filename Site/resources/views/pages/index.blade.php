@@ -3,13 +3,13 @@
 @section('content')
 <div class="container-left">
 	<a href="offer">
-    	<img class="pure-img-responsive" src="http://farm3.staticflickr.com/2875/9069037713_1752f5daeb.jpg" alt="Peyto Lake">
+		<h1>Aanbieden</h1>
 	</a>
 </div>
 
 <div class="container-right">
-	<a href="offer">
-    	<img class="pure-img-responsive" src="http://farm3.staticflickr.com/2813/9069585985_80da8db54f.jpg" alt="Peyto Lake">
+	<a href="buy">
+		<h1>Kopen</h1>
 	</a>
 </div>
 @endsection
