@@ -6,7 +6,9 @@
 
 <div id="menu">
     <div class="pure-menu">
-        <a class="pure-menu-heading" href="/">Home</a>
+        <a class="pure-menu-heading" href="/">
+            <img src="/img/garden.png" alt="" class="pure-img">
+        </a>
 
         <ul class="pure-menu-list">
             @if ( Auth::guest() )

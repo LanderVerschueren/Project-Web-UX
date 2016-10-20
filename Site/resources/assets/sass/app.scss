@@ -9,74 +9,17 @@ body {
 	flex-direction: row;
 }
 
-.container_nav {
-	flex: 2;
-
-	padding: 5% 1% 5% 1%;
-	background-color: white;
+#main {
+  height: 100%!important;
 }
 
-.navigation {
-	height: 100%;
-
-	display: flex;
-	flex-direction: column;
+.header {
+  height: 20%;
 }
 
-.logo {
-	flex: 1;
-	text-align: center;
-}
-
-.logo a img {
-	width: 100%;
-	height: auto;
-}
-
-.user-info {
-	flex: 3;
-
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	list-style-type: none;
-}
-
-.rest-info {
-	flex: 8;
-}
-
-.container_content {
-	display: flex;
-	flex-direction: column;
-	flex: 10;
-	
-	padding: 5%;
-	box-shadow:-2px 0px 15px 0px rgba(#13232f,.3);
-}
-
-.search {
-	display: block;
-	width: 100%;
-	height: 100px;
-	border-bottom: 1px black solid;
-}
-
-.search form input {
-	padding: 5px 5px 5px 20px;
-	border: 0;
-	width: 80%;
-	height: 50px;
-	float: left;
-}
-
-.search form button {
-	padding: 0;
-	border: 0;
-	width: 20%;
-	height: 50px;
-	float: right;
+.content {
+  height: 80%;
+  margin-bottom: 0!important;
 }
 
 #app {
@@ -84,6 +27,9 @@ body {
 
 	display: flex;
 	flex-direction: row;
+
+  justify-content: center;
+  align-items: center;
 }
 
 .header form {
@@ -105,83 +51,7 @@ body {
 	height: 50px;
 }
 
-.container-left {
-	flex: 1;
-	border-right: 5px solid;
 
-	background-image: url('/img/groenten.jpg');
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: bottom;
-}
-
-.container-left:hover {
-	animation: flexGrow 500ms ease forwards;
-}
-
-@keyframes flexGrow {
-	0% {
-		flex: 1;
-	}
-	100% {
-		flex: 2;
-	}
-}
-
-.container-left a {
-	width: 100%;
-	height: 100%;
-	padding: 5%;
-
-	background: rgba(0, 0, 0, 0.6);
-
-	display: flex;
-	align-items: flex-start;
-}
-
-.container-left a:hover {
-	text-decoration: none;
-}
-
-.container-left a h1 {
-	font-family: 'Inconsolata', monospace;
-	color: white;
-	margin: 0;
-}
-
-.container-right {
-	flex: 1;
-	border-left: 5px solid;
-
-	background-image: url('/img/fruit.jpeg');
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: bottom;
-}
-
-.container-right:hover {
-	animation: flexGrow 500ms ease forwards;
-}
-
-.container-right a {
-	width: 100%;
-	height: 100%;
-	padding: 5%;
-
-	background: rgba(0, 0, 0, 0.6);
-
-	display: flex;
-	align-items: flex-end;
-}
-
-.container-right a:hover {
-	text-decoration: none;
-}
-
-.container-right a h1 {
-	font-family: 'Inconsolata', monospace;
-	color: white;
-}
 
 // Fonts
 @import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
