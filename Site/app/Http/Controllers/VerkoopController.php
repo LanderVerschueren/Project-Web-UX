@@ -32,9 +32,41 @@ class VerkoopController extends Controller
         $offer->aantal = $request->input('aantal');
         $offer->prijs = $request->input('prijs');
         $offer->user_id = Auth::user()->id;
-        $offer->foto = 'image1.png';
+
+        $errors = [];
+
+        if ($request->hasFile('foto'))
+        {
+            if(Request::file('foto')->isValid())
+            {
+                $extension = Request::file('foto')->getClientOriginalExtension();
+                if($extension == 'jpg' || $extension == 'jpeg' || $extension == 'jpe' || $extension = 'png')
+                {
+                    $image = Request::file('foto');
+                    $destinationPath = 'images';
+                    $imageName = Auth::user()->id . "-1." . $extension;
+                    Request::file('foto')->move($destinationPath, $imageName);
+                    $offer->foto = $imageName;
+                }
+                else
+                {
+                    $errors['errormessage'] = 'file 1 does not have the correct extension';
+                }
+            }
+            else
+            {
+                $errors['errormessage'] = 'file 1 is not valid';
+                return view('upload');
+            }
+        }
+        else
+        {
+            $errors['errormessage'] = 'no file selected';
+            return view('upload');
+        }
+
         $offer->save();
 
-        return view('pages.offer');
+        return view('pages.offer', ['errors' => $errors]);
     }
 }
