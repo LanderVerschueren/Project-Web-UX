@@ -13,6 +13,19 @@ html, body {
   width: 20%;
 }
 
+.offerpanel{
+  border: 1px solid gray;
+}
+.offerpanel-image{
+  height: 200px;
+}
+.offerpanel-image-body{
+  text-align: center;
+}
+.offerpanel-info{
+
+}
+
 body {
   display: -webkit-box;
   display: flex;

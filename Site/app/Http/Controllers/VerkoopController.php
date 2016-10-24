@@ -47,7 +47,7 @@ class VerkoopController extends Controller
                 {
                     $image = Request::file('foto');
                     $destinationPath = 'images';
-                    $imageName = Auth::user()->id . "-1." . $extension;
+                    $imageName = Auth::user()->id . "-" . strval(\App\Offer::all()->count()+1) . "-1." . $extension;
                     Request::file('foto')->move($destinationPath, $imageName);
                     $offer->foto = $imageName;
                     $offer->save();
