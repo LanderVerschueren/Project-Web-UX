@@ -24,6 +24,8 @@ Route::get('/dashboard', 'dashboardController@index');
 Route::get('protected', ['middleware' => ['auth', 'admin'], function(){
     return "this page requires that you be logged in as Admin";
 }]);
+Route::get('/dashboard/users', 'dashboardController@users');
+Route::get('/dashboard/offers', 'dashboardController@offers');
 
 
 Route::post('/nieuw', 'VerkoopController@nieuwOffer');

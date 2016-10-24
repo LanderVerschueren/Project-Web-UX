@@ -3,9 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Offer;
-use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Request;
+
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Http\UploadedFile;
 use App\Http\Requests;
+
 
 class VerkoopController extends Controller
 {
@@ -28,14 +31,14 @@ class VerkoopController extends Controller
     public function nieuwOffer(Request $request)
     {
         $offer = new Offer();
-        $offer->naam = $request->input('naam');
-        $offer->aantal = $request->input('aantal');
-        $offer->prijs = $request->input('prijs');
+        $offer->naam = $request::Input('naam');
+        $offer->aantal = $request::Input('aantal');
+        $offer->prijs = $request::Input('prijs');
         $offer->user_id = Auth::user()->id;
 
         $errors = [];
 
-        if ($request->hasFile('foto'))
+        if (Request::hasFile('foto'))
         {
             if(Request::file('foto')->isValid())
             {
@@ -47,26 +50,27 @@ class VerkoopController extends Controller
                     $imageName = Auth::user()->id . "-1." . $extension;
                     Request::file('foto')->move($destinationPath, $imageName);
                     $offer->foto = $imageName;
+                    $offer->save();
+
+                    return view('pages.offer', ['errors' => $errors]);
                 }
                 else
                 {
-                    $errors['errormessage'] = 'file 1 does not have the correct extension';
+                    $errors['errormessage'] = 'file does not have the correct extension';
+                    return view('pages.index', ['errors' => $errors]);
                 }
             }
             else
             {
-                $errors['errormessage'] = 'file 1 is not valid';
-                return view('upload');
+                $errors['errormessage'] = 'file is not valid';
+                return view('pages.index', ['errors' => $errors]);
             }
         }
         else
         {
             $errors['errormessage'] = 'no file selected';
-            return view('upload');
+            return view('pages.index', ['errors' => $errors]);
         }
 
-        $offer->save();
-
-        return view('pages.offer', ['errors' => $errors]);
     }
 }

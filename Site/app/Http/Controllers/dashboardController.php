@@ -18,4 +18,14 @@ class dashboardController extends Controller
     {
         return view('pages.dashboard');
     }
+
+    public function users()
+    {
+        return view('pages.dashboard-users');
+    }
+
+    public function offers()
+    {
+        return view('pages.dashboard-offers');
+    }
 }
