@@ -11,7 +11,7 @@
 
     <div id="main">
     <div class="header">
-      <h1>Page Title</h1>
+      @yield('pageTitle')
       <form action="\search" method="post">
           {{ csrf_field() }}
         <input type="text" name="searchTerm" id="searchterm" placeholder="Zoeken naar...">

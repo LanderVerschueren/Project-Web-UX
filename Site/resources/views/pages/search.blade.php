@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('pageTitle')
+    <h1>Zoeken</h1>
+@endsection
+
 @section('content')
     <div class="container">
         <div class="row">
@@ -16,7 +20,7 @@
                                     <div class="col-md-4 offerpanel-info">
                                         <h2>{{ $result->naam }}</h2>
                                         <p>prijs: {{ $result->prijs }} euro</p>
-                                        <p>aantal: {{ $result->aantal }}</p><br>
+                                        <p>aantal: {{ $result->aantal }}</p>
                                         <a href="user/{id}">{{ \App\User::find($result->user_id)->achternaam }} {{ \App\User::find($result->user_id)->voornaam }}</a>
                                     </div>
                                 </div>
