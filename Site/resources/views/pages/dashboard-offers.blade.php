@@ -36,7 +36,7 @@
                                         <td>Ja</td>
                                     @endif
                                     <td><a href=""><i class="fa fa-times-circle fa-lg" style="cursor: pointer;color: red" aria-hidden="true"></i></a></td>
-                                    <td><a href=""><i class="fa fa-pencil-square-o fa-lg" style="cursor: pointer;color: green" aria-hidden="true"></i></a></td>
+                                    <td><a href="\dashboard\offers\edit\{{ $offer->id }}"><i class="fa fa-pencil-square-o fa-lg" style="cursor: pointer;color: green" aria-hidden="true"></i></a></td>
                                 </tr>
                             @endforeach
                         </table>

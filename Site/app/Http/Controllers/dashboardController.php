@@ -30,4 +30,14 @@ class dashboardController extends Controller
     {
         return view('pages.dashboard-offers');
     }
+
+    public function userEdit()
+    {
+        return view('pages.dashboard-user-edit');
+    }
+
+    public function offerEdit()
+    {
+        return view('pages.dashboard-offer-edit');
+    }
 }
