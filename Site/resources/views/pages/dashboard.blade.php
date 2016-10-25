@@ -5,7 +5,18 @@
 @endsection
 
 @section('content')
-    <h1>dashboard</h1>
-    <a href="/dashboard/users">beheer users</a>
-    <a href="/dashboard/offers">beheer offers</a>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <h1 class="text-center">dashboard</h1>
+                        <p><a href="/dashboard/users">beheer users</a></p>
+                        <p><a href="/dashboard/offers">beheer offers</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 @endsection
