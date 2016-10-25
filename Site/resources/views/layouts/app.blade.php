@@ -12,9 +12,10 @@
     <div id="main">
     <div class="header">
       <h1>Page Title</h1>
-      <form action="">
-        <input type="text" placeholder="Zoeken naar...">
-        <button class="" type="submit">Search</button>
+      <form action="\search" method="post">
+          {{ csrf_field() }}
+        <input type="text" name="searchTerm" id="searchterm" placeholder="Zoeken naar...">
+        <button type="submit">Search</button>
       </form>
     </div>
 

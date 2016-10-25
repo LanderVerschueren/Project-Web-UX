@@ -26,6 +26,7 @@ Route::get('protected', ['middleware' => ['auth', 'admin'], function(){
 }]);
 Route::get('/dashboard/users', 'dashboardController@users');
 Route::get('/dashboard/offers', 'dashboardController@offers');
+Route::post('/search', 'searchController@index');
 
 
 Route::post('/nieuw', 'VerkoopController@nieuwOffer');
