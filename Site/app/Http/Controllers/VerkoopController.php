@@ -21,7 +21,9 @@ class VerkoopController extends Controller
 
     public function index()
     {
-        return view('pages.offer');
+        $offers = Offer::all();
+
+        return view('pages.offer', ['offers' => $offers]);
     }
 
     public function nieuw()
@@ -48,7 +50,7 @@ class VerkoopController extends Controller
                 {
                     $image = Request::file('foto');
                     $destinationPath = 'images';
-                    $imageName = Auth::user()->id . "-" . strval(\App\Offer::all()->count()+1) . "-1." . $extension;
+                    $imageName = Auth::user()->id . "-" . strval(Offer::all()->count()+1) . "-1." . $extension;
                     Request::file('foto')->move($destinationPath, $imageName);
                     $offer->foto = $imageName;
 
@@ -61,7 +63,7 @@ class VerkoopController extends Controller
                             {
                                 $image = Request::file('foto2');
                                 $destinationPath = 'images';
-                                $imageName = Auth::user()->id . "-" . strval(\App\Offer::all()->count()+1) . "-2." . $extension;
+                                $imageName = Auth::user()->id . "-" . strval(Offer::all()->count()+1) . "-2." . $extension;
                                 Request::file('foto2')->move($destinationPath, $imageName);
                                 $offer->foto2 = $imageName;
 
@@ -71,7 +73,7 @@ class VerkoopController extends Controller
                                         if ($extension == 'jpg' || $extension == 'jpeg' || $extension == 'jpe' || $extension = 'png') {
                                             $image = Request::file('foto3');
                                             $destinationPath = 'images';
-                                            $imageName = Auth::user()->id . "-" . strval(\App\Offer::all()->count() + 1) . "-3." . $extension;
+                                            $imageName = Auth::user()->id . "-" . strval(Offer::all()->count() + 1) . "-3." . $extension;
                                             Request::file('foto3')->move($destinationPath, $imageName);
                                             $offer->foto3 = $imageName;
 

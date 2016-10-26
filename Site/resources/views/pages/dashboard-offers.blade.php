@@ -22,7 +22,7 @@
                                 <th>user</th>
                                 <th>deleted</th>
                             </tr>
-                            @foreach(\App\Offer::all() as $offer)
+                            @foreach(Offer::all() as $offer)
                                 <tr>
                                     <td>{{ $offer->id }}</td>
                                     <td>{{ $offer->naam }}</td>
@@ -31,7 +31,7 @@
                                     <td>{{ $offer->foto }}</td>
                                     <td>{{ $offer->foto2 }}</td>
                                     <td>{{ $offer->foto3 }}</td>
-                                    <td><a href="user/{id}">{{ \App\User::find($offer->user_id)->achternaam . \App\User::find($offer->user_id)->voornaam }}</a></td>
+                                    <td><a href="user/{id}">{{ User::find($offer->user_id)->achternaam . User::find($offer->user_id)->voornaam }}</a></td>
                                     @if($offer->deleted_at == null)
                                         <td>Nee</td>
                                     @else
