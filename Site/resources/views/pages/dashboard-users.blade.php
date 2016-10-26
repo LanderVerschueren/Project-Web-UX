@@ -22,7 +22,7 @@
                                 <th>admin</th>
                                 <th>deleted</th>
                             </tr>
-                            @foreach(\App\User::all() as $user)
+                            @foreach($users as $user)
                                 <tr>
                                     <td>{{ $user->id }}</td>
                                     <td>{{ $user->voornaam }}</td>
