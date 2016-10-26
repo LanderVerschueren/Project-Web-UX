@@ -1,9 +1,5 @@
 @extends('layouts.app')
 
-@section('title', 'Dashboard - Offers')
-    <h1>Dashboard - Offers</h1>
-@endsection
-
 @section('content')
 
     <div class="container">

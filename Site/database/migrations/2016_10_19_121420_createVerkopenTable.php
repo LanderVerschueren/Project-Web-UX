@@ -18,8 +18,10 @@ class CreateVerkopenTable extends Migration
             $table->increments('id');
             $table->string('naam');
             $table->integer('aantal');
-            $table->integer('prijs');
+            $table->float('prijs');
             $table->string('foto');
+            $table->string('foto2')->nullable();
+            $table->string('foto3')->nullable();
             $table->integer('user_id')->unsigned();
             $table->foreign('user_id')
                 ->references('id')->on('users')

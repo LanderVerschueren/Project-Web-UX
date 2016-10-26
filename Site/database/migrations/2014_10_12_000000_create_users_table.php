@@ -22,6 +22,7 @@ class CreateUsersTable extends Migration
             $table->string('adres');
             $table->string('woonplaats');
             $table->string('postcode');
+            $table->boolean('admin');
             $table->softDeletes();
             $table->rememberToken();
             $table->timestamps();
