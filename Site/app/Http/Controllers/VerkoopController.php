@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\UploadedFile;
 use App\Http\Requests;
 use phpDocumentor\Reflection\Types\Integer;
+use Illuminate\Support\Facades\DB;
 
 
 class VerkoopController extends Controller
@@ -21,7 +22,9 @@ class VerkoopController extends Controller
 
     public function index()
     {
-        return view('pages.offer');
+        $offers = DB::table('offers')->get();
+        $users = DB::table('users')->get();
+        return view('pages.offer', ['offers' => $offers, 'users' => $users]);
     }
 
     public function nieuw()
