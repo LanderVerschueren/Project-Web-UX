@@ -31,13 +31,15 @@ class dashboardController extends Controller
         return view('pages.dashboard-offers');
     }
 
-    public function userEdit()
+    public function userEdit($id)
     {
-        return view('pages.dashboard-user-edit');
+        $user = \App\User::where('id', '=', $id);
+
+        return view('pages.dashboard-user-edit', ['user' => $user]);
     }
 
-    public function offerEdit()
+    public function offerEdit($id)
     {
-        return view('pages.dashboard-offer-edit');
+        return view('pages.dashboard-offer-edit',['offer' => \App\Offer::findOrFail($id)]);
     }
 }

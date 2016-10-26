@@ -12,13 +12,15 @@
                 <div class="panel panel-default">
                     <div class="panel-body text-center">
                         <h1 class="text-center">dashboard offers</h1>
-                        <table class="dashboard-offers-table">
+                        <table class="dashboard-table">
                             <tr>
                                 <th>id</th>
                                 <th>naam</th>
                                 <th>aantal</th>
                                 <th>prijs</th>
                                 <th>foto</th>
+                                <th>foto 2</th>
+                                <th>foto 3</th>
                                 <th>user</th>
                                 <th>deleted</th>
                             </tr>
@@ -29,6 +31,8 @@
                                     <td>{{ $offer->aantal }}</td>
                                     <td>{{ $offer->prijs }}</td>
                                     <td>{{ $offer->foto }}</td>
+                                    <td>{{ $offer->foto2 }}</td>
+                                    <td>{{ $offer->foto3 }}</td>
                                     <td><a href="user/{id}">{{ \App\User::find($offer->user_id)->achternaam . \App\User::find($offer->user_id)->voornaam }}</a></td>
                                     @if($offer->deleted_at == null)
                                         <td>Nee</td>

@@ -12,8 +12,8 @@
 
         <ul class="pure-menu-list">
             @if ( Auth::guest() )
-            <li class="pure-menu-item"><a href="login" class="pure-menu-link">Inloggen</a></li>
-            <li class="pure-menu-item"><a href="register" class="pure-menu-link">Registreren</a></li>
+            <li class="pure-menu-item"><a href="\login" class="pure-menu-link">Inloggen</a></li>
+            <li class="pure-menu-item"><a href="\register" class="pure-menu-link">Registreren</a></li>
             @else
             <li class="pure-menu-item"><a href="#" class="pure-menu-link">Hallo {{ ucfirst( Auth::user()->voornaam ) }}</a></li>
             @if(Auth::user()->isadmin())
@@ -31,8 +31,8 @@
             @endif
         </ul>
         <ul class="pure-menu-list">
-            <li class="pure-menu-item"><a href="offer" class="pure-menu-link">Aanbieden</a></li>
-            <li class="pure-menu-item"><a href="buy" class="pure-menu-link">Kopen</a></li>
+            <li class="pure-menu-item"><a href="\offer" class="pure-menu-link">Aanbieden</a></li>
+            <li class="pure-menu-item"><a href="\buy" class="pure-menu-link">Kopen</a></li>
         </ul>
     </div>
 </div>

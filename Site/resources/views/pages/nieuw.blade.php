@@ -9,7 +9,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="panel panel-default">
-                    <div class="panel-body">
+                    <div class="panel-body text-center">
                             <form action="nieuw" method="post" enctype="multipart/form-data">
                                 {{ csrf_field() }}
 
@@ -29,7 +29,7 @@
                                     </div>
                                 </div>
 
-                                <div class="form-group">
+                                <div class="form-group prijsInput">
                                     <label for="prijs" class="col-md-4 control-label">prijs</label>
 
                                     <div class="col-md-6">
@@ -38,12 +38,28 @@
                                 </div>
 
                                 <div>
-                                    <br><br>
-                                    <label>Select image to upload:</label><br>
-                                    <input type="file" name="foto" id="foto">
+                                    <div class="col-md-4">
+                                        <br><br>
+                                        <label>Select image to upload:</label><br>
+                                        <input type="file" name="foto" accept="image/jpeg, image/png" id="foto">
 
-                                    <input type="submit" value="Upload Image" name="submit">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <br><br>
+                                        <label>Select image to upload:</label><br>
+                                        <input type="file" name="foto2" accept="image/jpeg, image/png" id="foto2">
+
+                                    </div>
+                                    <div class="col-md-4">
+                                        <br><br>
+                                        <label>Select image to upload:</label><br>
+                                        <input type="file" name="foto3" accept="image/jpeg, image/png" id="foto3">
+
+                                    </div>
                                 </div>
+
+
+                                <input type="submit" value="Upload offer" name="submit" id="nieuwSubmit">
 
 
                             </form>
