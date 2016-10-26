@@ -52,7 +52,7 @@ class dashboardController extends Controller
 
     public function offerDelete($id)
     {
-        
+
 
         return redirect('dashboard/offers');
     }
