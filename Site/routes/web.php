@@ -31,3 +31,5 @@ Route::get('/dashboard/users/edit/{id}', 'dashboardController@userEdit');
 Route::get('/dashboard/offers/edit/{id}', 'dashboardController@offerEdit');
 
 Route::post('/nieuw', 'VerkoopController@nieuwOffer');
+Route::post('/editOffer/{id}', 'dashboardController@editOffer');
+Route::post('/editUser/{id}', 'dashboardController@editUser');
