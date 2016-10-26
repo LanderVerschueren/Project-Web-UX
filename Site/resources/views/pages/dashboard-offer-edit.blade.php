@@ -11,7 +11,7 @@
                 <div class="panel panel-default">
                     <div class="panel-body text-center">
                         <h1>Edit offer {{ $offer->id }}</h1>
-                        <form action="offers" method="post" enctype="multipart/form-data">
+                        <form action="\editOffer\{{$offer->id}}" method="post" enctype="multipart/form-data">
                             {{ csrf_field() }}
                             <div class="form-group">
                                 <label for="naam" class="col-md-4 control-label">naam</label>

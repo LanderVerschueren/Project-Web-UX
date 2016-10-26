@@ -33,9 +33,7 @@ class dashboardController extends Controller
 
     public function userEdit($id)
     {
-        $user = \App\User::where('id', '=', $id);
-
-        return view('pages.dashboard-user-edit', ['user' => $user]);
+        return view('pages.dashboard-user-edit', ['user' => \App\User::findOrFail($id)]);
     }
 
     public function offerEdit($id)

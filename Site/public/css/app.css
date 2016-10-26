@@ -39,6 +39,9 @@ html, body {
 #nieuwSubmit{
   margin-top: 2%;
 }
+#saveUser{
+  margin-top: 10%;
+}
 
 body {
   display: -webkit-box;
