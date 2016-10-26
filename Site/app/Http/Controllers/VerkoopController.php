@@ -22,15 +22,8 @@ class VerkoopController extends Controller
 
     public function index()
     {
-<<<<<<< HEAD
-        $offers = DB::table('offers')->get();
-        $users = DB::table('users')->get();
-        return view('pages.offer', ['offers' => $offers, 'users' => $users]);
-=======
         $offers = Offer::all();
-
         return view('pages.offer', ['offers' => $offers]);
->>>>>>> 1c754874667a946eb0f826e961e7e9479ea2114a
     }
 
     public function nieuw()
