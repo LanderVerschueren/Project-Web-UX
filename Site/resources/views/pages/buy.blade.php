@@ -29,4 +29,24 @@
         <h1>Er zijn nog geen aanbiedingen toegevoegd</h1>
     @endif
 </div>
+<<<<<<< HEAD
 @endsection
+=======
+@endsection
+
+
+<!--
+<div class="offerpanel col-md-6">
+                <div class="col-md-8 offerpanel-image-body">
+                    <img class="offerpanel-image" src="images/{{ $offer->foto }}">
+                </div>
+                <div class="col-md-4 offerpanel-info">
+                    <h2>{{ $offer->naam }}</h2>
+                    <p>prijs: {{ $offer->prijs }} euro</p>
+                    <p>aantal: {{ $offer->aantal }}</p><br>
+                    <a href="user/{id}">{{ User::find($offer->user_id)->achternaam }} {{ User::find($offer->user_id)->voornaam }}</a>
+                </div>
+            </div>
+
+            -->
+>>>>>>> 1c754874667a946eb0f826e961e7e9479ea2114a

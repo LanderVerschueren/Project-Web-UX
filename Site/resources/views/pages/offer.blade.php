@@ -8,11 +8,11 @@
             <div class="col-md-12">
                 <div class="panel panel-default">
                     <div class="panel-body">
-                        @if(\App\Offer::all()->count() > 0)
-                            @if(\App\Offer::where('user_id', Auth::user()->id)->count() > 0)
+                        @if($offers->count() > 0)
+                            @if($offers->where('user_id', Auth::user()->id)->count() > 0)
                                 <h1>Jou toegevoegde offers</h1>
                                 <table id="offers">
-                                    @foreach(\App\Offer::all() as $offer)
+                                    @foreach($offers as $offer)
                                         @if($offer->user_id == Auth::user()->id)
                                         <tr>
                                             <td>{{ $offer->naam }}</td>

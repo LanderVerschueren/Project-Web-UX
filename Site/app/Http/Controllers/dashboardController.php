@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\User;
+use App\Offer;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -35,12 +36,12 @@ class dashboardController extends Controller
 
     public function userEdit($id)
     {
-        return view('pages.dashboard-user-edit', ['user' => \App\User::findOrFail($id)]);
+        return view('pages.dashboard-user-edit', ['user' => User::findOrFail($id)]);
     }
 
     public function offerEdit($id)
     {
-        return view('pages.dashboard-offer-edit',['offer' => \App\Offer::findOrFail($id)]);
+        return view('pages.dashboard-offer-edit',['offer' => Offer::findOrFail($id)]);
     }
 
     public function userDelete($id)
