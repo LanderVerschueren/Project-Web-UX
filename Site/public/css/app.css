@@ -18,6 +18,11 @@ body {
   -webkit-box-direction: normal;
   flex-direction: row; }
 
+#main {
+  width: 80%;
+  height: 100% !important;
+  margin: 0 auto; }
+
 .container_row {
   display: -webkit-box;
   display: flex;
@@ -40,37 +45,6 @@ body {
   justify-content: center;
   -webkit-box-align: center;
   align-items: center; }
-
-/*  HEADER  ---------------------------------------------------------------------*/
-.pure-menu-heading {
-  padding: 0 !important; }
-
-#main {
-  height: 100% !important; }
-
-.header {
-  height: 20%; }
-
-.header form {
-  max-width: 1200px;
-  margin: 0 auto; }
-
-.header form input {
-  padding: 5px 5px 5px 15px;
-  border: none;
-  width: 80%;
-  height: 50px; }
-
-.header form button {
-  padding: 0;
-  border: none;
-  width: 19%;
-  height: 50px; }
-
-/*  CONTENT  ---------------------------------------------------------------------*/
-.content {
-  height: 80%;
-  margin-bottom: 0 !important; }
 
 /*  HOMEPAGE  ---------------------------------------------------------------------*/
 .homepage {
@@ -148,6 +122,20 @@ body {
   margin: 0; }
 
 .offer .panel-footer {
+  width: 100%; }
+
+/*  DASHBOARD  ---------------------------------------------------------------------*/
+.dashboard {
+  background-image: none;
+  width: 100%; }
+
+.dashboard:first-child {
+  padding-right: 2%; }
+
+.dashboard:last-child {
+  padding-left: 2%; }
+
+.dashboard .panel {
   width: 100%; }
 
 /*!
@@ -5951,17 +5939,38 @@ This is the parent `<div>` that contains the menu and the content area.
 The content `<div>` is where all your content goes.
 */
 .content {
+  height: 80%;
   margin: 0 auto;
   max-width: 1200px;
-  margin-bottom: 50px;
+  margin-bottom: 0;
   line-height: 1.6em; }
 
 .header {
+  height: 20%;
   margin: 0;
   color: #333;
   text-align: center;
-  padding: 2.5em 2em 0;
+  padding: 2.5em 0 0 0;
   border-bottom: 1px solid #eee; }
+
+.pure-menu-heading {
+  padding: 0 !important; }
+
+.header form {
+  max-width: 1200px;
+  margin: 0 auto; }
+
+.header form input {
+  padding: 5px 5px 5px 15px;
+  border: none;
+  width: 80%;
+  height: 50px; }
+
+.header form button {
+  padding: 0;
+  border: none;
+  width: 19%;
+  height: 50px; }
 
 .header h1 {
   margin: 0.2em 0;
@@ -6102,9 +6111,6 @@ small screens.
 Hides the menu at `48em`, but modify this based on your app's needs.
 */
 @media (min-width: 48em) {
-  .header {
-    padding-left: 2em;
-    padding-right: 2em; }
   #layout {
     padding-left: 200px;
     /* left col width "#menu" */
@@ -6129,14 +6135,14 @@ Hides the menu at `48em`, but modify this based on your app's needs.
   #layout.active {
     position: relative;
     left: 200px; }
+  #main {
+    width: 95%; }
   #app {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     flex-direction: column; }
   .container-left,
   .container-right {
-    width: 100%; }
-  .header {
-    padding: 2.5em 0 0 0; } }
+    width: 100%; } }
 
 /*# sourceMappingURL=app.css.map */

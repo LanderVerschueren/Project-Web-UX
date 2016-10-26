@@ -15,8 +15,9 @@ class searchController extends Controller
     public function index(Request $request)
     {
         $searchTerm = $request->input('searchTerm');
-        $searchResults = DB::table('offers')->where('naam', 'like', '%'.$searchTerm.'%')->get();
+        $searchResults = DB::table('offers')->where('naam', 'like', '%'.$searchTerm.'%')->get();        
+        $users = DB::table('users')->get();
 
-        return view('pages.search', ['searchTerm' => $searchTerm, 'searchResults' => $searchResults]);
+        return view('pages.search', ['searchTerm' => $searchTerm, 'searchResults' => $searchResults, 'users' => $users]);
     }
 }

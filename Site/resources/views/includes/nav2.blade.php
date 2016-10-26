@@ -16,7 +16,7 @@
             @else
             <li class="pure-menu-item"><a href="#" class="pure-menu-link">Hallo {{ ucfirst( Auth::user()->voornaam ) }}</a></li>
             @if(Auth::user()->isadmin())
-            <li class="pure-menu-item"><a href="/dashboard" class="pure-menu-link">Dashboard</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link" id="dashboard">Dashboard</a></li>
             @endif
             <li class="pure-menu-item" class="menu-item-divided pure-menu-selected">
                 <a href="{{ url('/logout') }}" class="pure-menu-link" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
