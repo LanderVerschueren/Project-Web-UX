@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use Illuminate\Support\Facades\DB;
 
 class KoopController extends Controller
 {
@@ -16,6 +17,7 @@ class KoopController extends Controller
 
     public function index()
     {
-        return view('pages.buy');
+        $offers = DB::table('offers')->get();
+        return view('pages.buy', ['offers' => $offers]);
     }
 }
