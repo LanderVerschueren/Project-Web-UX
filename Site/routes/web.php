@@ -29,6 +29,8 @@ Route::get('/dashboard/offers', 'dashboardController@offers');
 Route::post('/search', 'searchController@index');
 Route::get('/dashboard/users/edit/{id}', 'dashboardController@userEdit');
 Route::get('/dashboard/offers/edit/{id}', 'dashboardController@offerEdit');
+Route::get('/dashboard/users/delete/{id}', 'dashboardController@userDelete');
+Route::get('/dashboard/offers/delete/{id}', 'dashboardController@offerDelete');
 
 Route::post('/nieuw', 'VerkoopController@nieuwOffer');
 Route::post('/editOffer/{id}', 'dashboardController@editOffer');
