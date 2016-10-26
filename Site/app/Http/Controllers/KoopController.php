@@ -21,4 +21,9 @@ class KoopController extends Controller
         $users = DB::table('users')->get();
         return view('pages.buy', ['offers' => $offers, 'users' => $users]);
     }
+
+    public function detail($id) {
+        $offer = DB::table('offers')->get()->where('id', $id);
+        return view('pages.buy_detail', ['offers' => $offer]);
+    }
 }

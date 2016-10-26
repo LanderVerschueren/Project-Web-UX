@@ -6,17 +6,24 @@
 <div class="container_column">
     @if($offers->count() > 0)
         @foreach($offers as $offer)
-            <div class="container_row offer">
+        <div class="offer container_column panel panel-default">
+            <div class="title_offer panel-heading">
+                <h2>{{ ucfirst($offer->naam) }}</h2>
+            </div>
+            <div class="info_offer container_row panel-body">
                 <div class="left">
                     <img src="images/{{ $offer->foto }}" alt="">
                 </div>
                 <div class="right">
-                    <h2>{{ $offer->naam }}</h2>
-                    <p>prijs: {{ $offer->prijs }} euro</p>
-                    <p>aantal: {{ $offer->aantal }}</p><br>
-                    <a href="user/{id}">{{ $users->where('id',$offer->user_id)->first()->voornaam . $users->where('id',$offer->user_id)->first()->achternaam }}</a>
+                    <span>prijs: {{ $offer->prijs }} euro</span>
+                    <span>aantal: {{ $offer->aantal }}</span>
+                    <span><a href="user/{id}">{{ ucfirst($users->where('id',$offer->user_id)->first()->voornaam) . " " . ucfirst($users->where('id',$offer->user_id)->first()->achternaam) }}</a></span>
                 </div>
             </div>
+            <div class="panel-footer">
+                <a href="/offer/{{ $offer->id }}">Bekijk aanbieding</a>
+            </div>
+        </div>    
         @endforeach
     @else
         <h1>Er zijn nog geen aanbiedingen toegevoegd</h1>

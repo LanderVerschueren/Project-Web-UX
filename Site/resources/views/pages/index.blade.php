@@ -3,7 +3,7 @@
 @section('title', 'Homepage')
 
 @section('content')
-<div class="container_row">
+<div class="container_row homepage">
 	<div class="container-left">
 		<a href="offer">
 			<h1>Aanbieden</h1>
