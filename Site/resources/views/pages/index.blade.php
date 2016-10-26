@@ -1,8 +1,6 @@
 @extends('layouts.app')
 
-@section('pageTitle')
-	<h1>Homepagina</h1>
-@endsection
+@section('title', 'Homepage')
 
 @section('content')
 <div class="container-left">

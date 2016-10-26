@@ -11,19 +11,22 @@
 
     <div id="main">
     <div class="header">
-      @yield('pageTitle')
-      <form action="\search" method="post">
-          {{ csrf_field() }}
-        <input type="text" name="searchTerm" id="searchterm" placeholder="Zoeken naar...">
-        <button type="submit">Search</button>
+      <h1>@yield('title')</h1>
+      <form action="">
+        <input type="text" placeholder="Zoeken naar...">
+        <button class="" type="submit">Search</button>
       </form>
     </div>
 
     <div class="content">
         <div id="app">
-            @yield('content')
+          @yield('content')
         </div>
-    </div>
+
+        <!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    @yield('test')
+</div>
   </div>
 </div>
 

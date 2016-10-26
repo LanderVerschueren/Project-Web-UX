@@ -1,8 +1,6 @@
 @extends('layouts.app')
 
-@section('pageTitle')
-    <h1>Dashboard - Offers</h1>
-@endsection
+@section('title', 'Dashboard - Offers')
 
 @section('content')
     <div class="container">

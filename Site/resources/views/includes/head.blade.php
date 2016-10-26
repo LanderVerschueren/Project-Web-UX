@@ -5,7 +5,7 @@
 <!-- CSRF Token -->
 <meta name="csrf-token" content="{{ csrf_token() }}">
 
-<title>{{ config('app.name', 'Project Web-UX') }}</title>
+<title>{{ config('app.name', 'Project Web-UX') }} | @yield('title')</title>
 
 <!-- Styles -->
 <link href="/css/normalize.css" rel="stylesheet"> 

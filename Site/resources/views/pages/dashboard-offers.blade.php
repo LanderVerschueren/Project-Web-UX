@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('pageTitle')
+@section('title', 'Dashboard - Offers')
     <h1>Dashboard - Offers</h1>
 @endsection
 
