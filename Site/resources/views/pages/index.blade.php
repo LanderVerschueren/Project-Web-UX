@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title', 'Homepage')
+
 @section('content')
 <div class="container-left">
 	<a href="offer">

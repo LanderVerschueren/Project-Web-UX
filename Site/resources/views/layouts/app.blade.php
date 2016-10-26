@@ -11,7 +11,7 @@
 
     <div id="main">
     <div class="header">
-      <h1>Page Title</h1>
+      <h1>@yield('title')</h1>
       <form action="">
         <input type="text" placeholder="Zoeken naar...">
         <button class="" type="submit">Search</button>
@@ -20,9 +20,13 @@
 
     <div class="content">
         <div id="app">
-            @yield('content')
+          @yield('content')
         </div>
-    </div>
+
+        <!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    @yield('test')
+</div>
   </div>
 </div>
 

@@ -13,7 +13,7 @@
         <ul class="pure-menu-list">
             @if ( Auth::guest() )
             <li class="pure-menu-item"><a href="login" class="pure-menu-link">Inloggen</a></li>
-            <li class="pure-menu-item"><a href="register" class="pure-menu-link">Registreren</a></li>
+            <li class="pure-menu-item"><a href="#" id="register" class="pure-menu-link">Registreren</a></li>
             @else
             <li class="pure-menu-item"><a href="#" class="pure-menu-link">Hallo {{ ucfirst( Auth::user()->voornaam ) }}</a></li>
             <li class="pure-menu-item" class="menu-item-divided pure-menu-selected">
