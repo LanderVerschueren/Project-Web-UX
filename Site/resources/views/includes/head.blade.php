@@ -22,12 +22,8 @@
 <link href="/css/app.css" rel="stylesheet">
 
 <!-- Scripts -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
-<script type="text/javascript" src="/js/material.js"></script>
-<script type="text/javascript" src="/js/ripples.js"></script>
 <script>
     window.Laravel = <?php echo json_encode([
         'csrfToken' => csrf_token(),
     ]); ?>
 </script>
-<script type="text/javascript" src="/js/app.js"></script>
