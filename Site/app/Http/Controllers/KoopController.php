@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Offer;
+use App\User;
 use App\Http\Requests;
 use Illuminate\Support\Facades\DB;
 
@@ -17,8 +18,8 @@ class KoopController extends Controller
 
     public function index()
     {
-        $offers = DB::table('offers')->get();
-        $users = DB::table('users')->get();
+        $offers = Offer::all();
+        $users = User::all();
         return view('pages.buy', ['offers' => $offers, 'users' => $users]);
     }
 

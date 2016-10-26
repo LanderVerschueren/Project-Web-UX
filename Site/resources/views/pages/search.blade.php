@@ -3,6 +3,7 @@
 @section('title', 'Zoeken')
 
 @section('content')
+<<<<<<< HEAD
 <div class="container_column">
     @if($searchResults->count() > 0)
         @foreach($searchResults as $result)
