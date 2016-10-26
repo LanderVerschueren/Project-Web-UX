@@ -18,6 +18,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index');
 Route::get('/', 'HomeController@index');
 Route::get('/offer', 'VerkoopController@index');
+Route::get('/offer/{id}', 'KoopController@detail');
 Route::get('/buy', 'KoopController@index');
 Route::get('/nieuw', 'VerkoopController@nieuw');
 Route::get('/dashboard', 'dashboardController@index');

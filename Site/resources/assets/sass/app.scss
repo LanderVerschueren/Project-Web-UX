@@ -1,14 +1,33 @@
-html,body {
+/*  GENERAL  ---------------------------------------------------------------------*/
+html,body,#app {
 	width: 100%;
 	height: 100%;
 }
 
 body {
 	display: flex;
-	min-height: 100vh;
+	min-height: 100%;
 	flex-direction: row;
 }
 
+.container_row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.container_column {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+}
+
+/*  HEADER  ---------------------------------------------------------------------*/
 .pure-menu-heading {
   padding: 0!important;
 }
@@ -40,19 +59,17 @@ body {
 	height: 50px;
 }
 
+
+/*  CONTENT  ---------------------------------------------------------------------*/
 .content {
   height: 80%;
   margin-bottom: 0!important;
 }
 
-#app {
-	height: 100%;
 
-	display: flex;
-	flex-direction: row;
-
-  justify-content: center;
-  align-items: center;
+/*  HOMEPAGE  ---------------------------------------------------------------------*/
+.homepage {
+  height: 100%;
 }
 
 .container-left,
@@ -88,6 +105,55 @@ body {
   }
 }
 
+
+/*  BUY  ---------------------------------------------------------------------*/
+.offer {
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 5%; 
+
+
+}
+
+.offer:nth-child(1) {
+  margin-top: 5%;
+}
+
+.offer .title_offer {
+  width: 100%;
+}
+
+.offer .info_offer {
+  width: 100%;
+}
+
+.offer .left {
+  flex: 2;
+}
+
+.offer .left img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.offer .right {
+  flex: 10;
+  padding-left: 5%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+}
+
+.offer .right span h2 {
+  margin: 0;
+}
+
+.offer .panel-footer {
+  width: 100%;
+}
 
 
 
