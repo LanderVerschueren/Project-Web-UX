@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use Illuminate\Support\Facades\DB;
 
 
 
@@ -41,15 +43,49 @@ class dashboardController extends Controller
         return view('pages.dashboard-offer-edit',['offer' => \App\Offer::findOrFail($id)]);
     }
 
-    public function editOffer($id)
+    public function userDelete($id)
     {
 
-        return redirect()->route('/dashboard/users');
+
+        return redirect('dashboard/users');
     }
 
-    public function editUser($id)
+    public function offerDelete($id)
     {
 
-        return redirect()->route('/dashboard/offers');
+
+        return redirect('dashboard/offers');
+    }
+
+    public function editOffer($id)
+    {
+        //code voor saven van geupdate offer
+
+
+        return redirect('dashboard/offers');
+    }
+
+    public function editUser(Request $request, $id)
+    {
+        //code voor saven van geupdate user
+        $user = User::find($id);
+
+        $user->voornaam = $request->input('voornaam');
+        $user->achternaam = $request->input('achternaam');
+        $user->email = $request->input('email');
+        $user->adres = $request->input('adres');
+        $user->woonplaats = $request->input('woonplaats');
+        $user->postcode = $request->input('postcode');
+        if($request->input('admin') == null)
+        {
+            $user->admin = false;
+        }
+        else
+        {
+            $user->admin = true;
+        }
+
+        $user->save();
+        return redirect('dashboard/users');
     }
 }

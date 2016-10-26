@@ -15,7 +15,7 @@
                                 <label for="voornaam" class="col-md-4 control-label">Voornaam</label>
 
                                 <div class="col-md-6">
-                                    <input id="voornaam" type="text" class="form-control" name="achternaam" value="{{ $user->voornaam }}" required autofocus>
+                                    <input id="voornaam" type="text" class="form-control" name="voornaam" value="{{ $user->voornaam }}" required autofocus>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -58,9 +58,9 @@
 
                                 <div class="col-md-6">
                                     @if($user->admin == true)
-                                        <input id="admin" type="checkbox" checked="checked" class="form-control" name="admin" value="{{ $user->admin }}" required autofocus>
+                                        <input id="admin" type="checkbox" checked="checked" class="form-control" name="admin" value="{{ $user->admin }}">
                                     @else
-                                        <input id="admin" type="checkbox" class="form-control" name="admin" value="{{ $user->admin }}" required autofocus>
+                                        <input id="admin" type="checkbox" class="form-control" name="admin" value="{{ $user->admin }}">
                                     @endif
                                 </div>
                             </div>

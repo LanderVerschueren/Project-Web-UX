@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Offer;
 use App\Http\Requests;
 use Illuminate\Support\Facades\DB;
 
@@ -23,7 +23,8 @@ class KoopController extends Controller
     }
 
     public function detail($id) {
-        $offer = DB::table('offers')->get()->where('id', $id);
-        return view('pages.buy_detail', ['offers' => $offer]);
+        $offer = Offer::find($id);
+
+        return view('pages.buy_detail', ['offer' => $offer]);
     }
 }
