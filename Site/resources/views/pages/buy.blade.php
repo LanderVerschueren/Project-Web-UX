@@ -13,7 +13,7 @@
                     <h2>{{ $offer->naam }}</h2>
                     <p>prijs: {{ $offer->prijs }} euro</p>
                     <p>aantal: {{ $offer->aantal }}</p><br>
-                    <a href="user/{id}">{{ $offers->achternaam }} {{ $offers->voornaam }}</a>
+                    <a href="user/{id}">{{ \App\User::find($offer->user_id)->achternaam }} {{ \App\User::find($offer->user_id)->voornaam }}</a>
                 </div>
             </div>
         @endforeach
