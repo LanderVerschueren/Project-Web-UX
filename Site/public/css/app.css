@@ -1,6 +1,11 @@
 @charset "UTF-8";
-/*  GENERAL  ---------------------------------------------------------------------*/
 @import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
+.temporary {
+  display: block;
+  width: 100%;
+  height: auto; }
+
+/*  GENERAL  ---------------------------------------------------------------------*/
 html, body, #app {
   width: 100%;
   height: 100%; }

@@ -36,7 +36,7 @@
                             <div>
                                 <div class="col-md-4">
                                     <label>Current image 1:</label><br>
-                                    <img src="/images/{{ $offer->foto }}" class="offerpanel-image">
+                                    <img class="temporary" src="/images/{{ $offer->foto }}" class="offerpanel-image">
 
                                     <label>Select image to upload:</label><br>
                                     <input class="imageUpload" accept="image/gif, image/jpeg, image/png" type="file" name="foto" id="editFotoUpload"">
@@ -44,9 +44,9 @@
                                 <div class="col-md-4">
                                     <label>Current image 2:</label><br>
                                     @if($offer->foto2 != null)
-                                        <img src="/images/{{ $offer->foto2 }}" class="offerpanel-image">
+                                        <img class="temporary" src="/images/{{ $offer->foto2 }}" class="offerpanel-image">
                                     @else
-                                        <img src="/img/noImage.png" class="offerpanel-image">
+                                        <img class="temporary" src="/img/noImage.png" class="offerpanel-image">
                                     @endif
 
                                     <label>Select image to upload:</label><br>
@@ -55,9 +55,9 @@
                                 <div class="col-md-4">
                                     <label>Current image 3:</label><br>
                                     @if($offer->foto3 != null)
-                                        <img src="/images/{{ $offer->foto3 }}" class="offerpanel-image">
+                                        <img class="temporary" src="/images/{{ $offer->foto3 }}" class="offerpanel-image">
                                     @else
-                                        <img src="/img/noImage.png" class="offerpanel-image">
+                                        <img class="temporary" src="/img/noImage.png" class="offerpanel-image">
                                     @endif
 
                                     <label>Select image to upload:</label><br>
