@@ -18,6 +18,7 @@ class KoopController extends Controller
     public function index()
     {
         $offers = DB::table('offers')->get();
-        return view('pages.buy', ['offers' => $offers]);
+        $users = DB::table('users')->get();
+        return view('pages.buy', ['offers' => $offers, 'users' => $users]);
     }
 }
