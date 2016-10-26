@@ -33,5 +33,6 @@
     <!-- Scripts -->
     <script src="/js/ui.js"></script>
     <script src="/js/app.js"></script>
+    <script src="https://use.fontawesome.com/45e46cc7cf.js"></script>
 </body>
 </html>
