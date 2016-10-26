@@ -1,5 +1,7 @@
+@extends('layouts.app')
 
-<!--<div class="container">
+@section('content')
+<div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
@@ -52,11 +54,12 @@
             </div>
         </div>
     </div>
-</div>-->
-<!-- Modal -->
-@extends('layouts.app')
+</div>
+@endsection
 
-@section('content')
+
+<!-- Modal -->
+<!--
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -112,5 +115,4 @@
             </div>
         </div>
     </div>
-</div>
-@endsection
+</div>-->

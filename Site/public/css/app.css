@@ -4,48 +4,6 @@ html, body {
   width: 100%;
   height: 100%; }
 
-/*lander vanaf hier mag het weg*/
-
-#offers table, tr, th, td {
-  border: 1px solid black;
-  text-align: center;
-}
-#offers {
-  width: 20%;
-}
-
-.offerpanel{
-  border: 1px solid gray;
-}
-.offerpanel-image{
-  height: 200px;
-}
-.offerpanel-image-body{
-  text-align: center;
-}
-.dashboard-table{
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-}
-.imageUpload{
-  margin-left: auto;
-  margin-right: auto;
-  padding-bottom: 2%;
-}
-.prijsInput {
-  padding-bottom: 5%;
-}
-#nieuwSubmit{
-  margin-top: 2%;
-}
-#saveUser{
-  margin-top: 10%;
-}
-
-/* tot hier */
-
 body {
   display: -webkit-box;
   display: flex;
