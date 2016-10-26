@@ -40,4 +40,16 @@ class dashboardController extends Controller
     {
         return view('pages.dashboard-offer-edit',['offer' => \App\Offer::findOrFail($id)]);
     }
+
+    public function editOffer($id)
+    {
+
+        return redirect()->route('/dashboard/users');
+    }
+
+    public function editUser($id)
+    {
+
+        return redirect()->route('/dashboard/offers');
+    }
 }

@@ -11,6 +11,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        //users seeding
         DB::table('users')->insert([
             'voornaam' => 'lander',
             'achternaam' => 'verschueren',
@@ -19,6 +20,7 @@ class DatabaseSeeder extends Seeder
             'adres' => 'lorem ipsum',
             'woonplaats' => 'lorem',
             'postcode' => '2000',
+            'admin' => false,
         ]);
         DB::table('users')->insert([
             'voornaam' => 'thomas',
@@ -28,6 +30,45 @@ class DatabaseSeeder extends Seeder
             'adres' => 'lorem ipsum',
             'woonplaats' => 'lorem',
             'postcode' => '2200',
+            'admin' => true,
+        ]);
+
+        //offers seeding
+        DB::table('offers')->insert([
+            'naam' => 'wortels',
+            'aantal' => 160,
+            'prijs' => 16.75,
+            'foto' => '1-1-1.jpg',
+            'foto2' => null,
+            'foto3' => null,
+            'user_id' => 1,
+        ]);
+        DB::table('offers')->insert([
+            'naam' => 'brocolli',
+            'aantal' => 45,
+            'prijs' => 5.75,
+            'foto' => '1-2-1.jpg',
+            'foto2' => '1-2-2.jpg',
+            'foto3' => null,
+            'user_id' => 1,
+        ]);
+        DB::table('offers')->insert([
+            'naam' => 'courgetten',
+            'aantal' => 81,
+            'prijs' => 2.75,
+            'foto' => '1-3-1.jpg',
+            'foto2' => '1-3-2.jpg',
+            'foto3' => '1-3-3.jpg',
+            'user_id' => 1,
+        ]);
+        DB::table('offers')->insert([
+            'naam' => 'pompoenen',
+            'aantal' => 17,
+            'prijs' => 7.80,
+            'foto' => '2-4-1.jpg',
+            'foto2' => null,
+            'foto3' => null,
+            'user_id' => 2,
         ]);
     }
 }

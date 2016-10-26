@@ -4,6 +4,7 @@ html, body {
   width: 100%;
   height: 100%; }
 
+/*lander vanaf hier mag het weg*/
 
 #offers table, tr, th, td {
   border: 1px solid black;
@@ -42,6 +43,8 @@ html, body {
 #saveUser{
   margin-top: 10%;
 }
+
+/* tot hier */
 
 body {
   display: -webkit-box;
