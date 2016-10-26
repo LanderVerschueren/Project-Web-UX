@@ -26,12 +26,15 @@ class dashboardController extends Controller
 
     public function users()
     {
-        return view('pages.dashboard-users');
+        $users = User::all();
+        return view('pages.dashboard-users', ['users' => $users]);
     }
 
     public function offers()
     {
-        return view('pages.dashboard-offers');
+        $offers = Offer::all();
+        $users = User::all();
+        return view('pages.dashboard-offers', ['offers' => $offers, 'users' => $users]);
     }
 
     public function userEdit($id)
