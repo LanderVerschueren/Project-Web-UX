@@ -3,36 +3,43 @@
 @section('title', 'Dashboard - Offers')
 
 @section('content')
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="panel panel-default">
-                    <div class="panel-body text-center">
-                        <h1>Edit offer {{ $offer->id }}</h1>
-                        <form action="\editOffer\{{$offer->id}}" method="post" enctype="multipart/form-data">
-                            {{ csrf_field() }}
-                            <div class="form-group">
-                                <label for="naam" class="col-md-4 control-label">naam</label>
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h2>Editing {{ $offer->naam }}</h2>
+    </div>
+    <div class="panel-body">
+        {!! Form::model($offer, ['url' => ['/editOffer', $offer->id], 'files' => true]) !!}
+        <div class="form-group">
+            {!! Form::label('naam', 'Naam:', ['class' => 'control-label']) !!}
+            {!! Form::text('naam', null, array('required', 'class' => 'form-control', 'placeholder' => 'Naam')) !!}
+        </div>
+        <div class="form-group">
+            {!! Form::label('aantal', 'Aantal:', ['class' => 'control-label']) !!}
+            {!! Form::text('aantal', null, array('required', 'class' => 'form-control', 'placeholder' => 'Aantal')) !!}
+        </div>
+        <div class="form-group">
+            {!! Form::label('prijs', 'Prijs:', ['class' => 'control-label']) !!}
+            {!! Form::text('prijs', null, array('required', 'class' => 'form-control', 'placeholder' => 'Prijs')) !!}
+        </div>
+        <div class="form-group">
+            <!-- IMAGE PREVIEW -->
+            {!! Form::label('foto', 'Foto:', ['class' => 'control-label']) !!}
+            {!! Form::file('foto', null, array('required', 'class' => 'form-control')) !!}
+            {!! Form::label('foto2', 'Foto:', ['class' => 'control-label']) !!}
+            {!! Form::file('foto2', null, array('required', 'class' => 'form-control')) !!}
+            {!! Form::label('foto3', 'Foto:', ['class' => 'control-label']) !!}
+            {!! Form::file('foto3', null, array('required', 'class' => 'form-control')) !!}
+        </div>
+        <div class="form-group">
+            {!! Form::submit('Sla offer op') !!}
+        </div>
+        {!! Form::close() !!}
+    </div>
+</div>
+@endsection
 
-                                <div class="col-md-6">
-                                    <input id="naam" type="text" class="form-control" name="naam" value="{{ $offer->naam }}" required autofocus>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="aantal" class="col-md-4 control-label">aantal</label>
 
-                                <div class="col-md-6">
-                                    <input id="aantal" type="integer" class="form-control" name="aantal" value="{{ $offer->aantal }}" required autofocus>
-                                </div>
-                            </div>
-                            <div class="form-group prijsInput">
-                                <label for="prijs" class="col-md-4 control-label">prijs</label>
-
-                                <div class="col-md-6">
-                                    <input id="prijs" type="integer" class="form-control" name="prijs" value="{{ $offer->prijs }}" required>
-                                </div>
-                            </div>
-
+<!--
                             <div>
                                 <div class="col-md-4">
                                     <label>Current image 1:</label><br>
@@ -72,4 +79,5 @@
             </div>
         </div>
     </div>
-@endsection
+
+    -->

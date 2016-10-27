@@ -24,7 +24,7 @@
                         </div>
                     </div>
                     <div class="panel-footer">
-                        <a href="">Pas aanbieding aan</a>
+                        <a href="/dashboard/offers/edit/{{ $offer->id }}">Pas aanbieding aan</a>
                     </div>
                 </div>   
                 @endif 

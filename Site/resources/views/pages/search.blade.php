@@ -3,32 +3,30 @@
 @section('title', 'Zoeken')
 
 @section('content')
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="panel panel-default">
-                    <div class="panel-body">
-                        <h1 class="text-center">searching for {{ $searchTerm }}</h1>
-                        @if($searchResults->count() > 0)
-                            @foreach($searchResults as $result)
-                                <div class="offerpanel col-md-6">
-                                    <div class="col-md-8 offerpanel-image-body">
-                                        <img class="offerpanel-image temporary" src="images/{{ $result->foto }}">
-                                    </div>
-                                    <div class="col-md-4 offerpanel-info">
-                                        <h2>{{ $result->naam }}</h2>
-                                        <p>prijs: {{ $result->prijs }} euro</p>
-                                        <p>aantal: {{ $result->aantal }}</p>
-                                        <a href="user/{id}">{{ $users->find($result->user_id)->achternaam . ' ' . $users->find($result->user_id)->voornaam }}</a>
-                                    </div>
-                                </div>
-                            @endforeach
-                        @else
-                            <h2>Geen aanbiedingen gevonden die te maken hebben met {{$searchTerm}}</h2>
-                        @endif
-                    </div>
+<div class="container_column">
+    @if($searchResults->count() > 0)
+        @foreach($searchResults as $result)
+        <div class="offer container_column panel panel-default">
+            <div class="title_offer panel-heading">
+                <h2>U zocht: "{{ $searchTerm }}"</h2>
+            </div>
+            <div class="info_offer container_row panel-body">
+                <div class="left">
+                    <img src="images/{{ $result->foto }}" alt="">
+                </div>
+                <div class="right">
+                    <span>prijs: {{ $result->prijs }} euro</span>
+                    <span>aantal: {{ $result->aantal }}</span>
+                    <span><a href="user/{id}">{{ ucfirst($users->where('id',$result->user_id)->first()->voornaam) . " " . ucfirst($users->where('id',$result->user_id)->first()->achternaam) }}</a></span>
                 </div>
             </div>
-        </div>
-    </div>
+            <div class="panel-footer">
+                <a href="/offer/{{ $result->id }}">Bekijk aanbieding</a>
+            </div>
+        </div>    
+        @endforeach
+    @else
+        <h1>Er zijn nog geen aanbiedingen gevonden</h1>
+    @endif
+</div>
 @endsection
