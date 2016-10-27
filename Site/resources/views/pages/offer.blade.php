@@ -8,6 +8,8 @@
         @if($offers->where('user_id', Auth::user()->id)->count() > 0)
             <h2>Jouw toegevoegde offers</h2>
 
+            <a href="/nieuw">Voeg aanbieding toe</a>
+
             @foreach($offers as $offer)
                 @if($offer->user_id == Auth::user()->id)
                 <div class="card"></div>
@@ -30,7 +32,7 @@
                 @endif 
             @endforeach
         @else
-            <h1>Er zijn nog geen aanbiedingen toegevoegd</h1>
+            <h1>Er zijn nog geen aanbiedingen toegevoegd op de site.</h1>
         @endif
     @endif
 </div>
