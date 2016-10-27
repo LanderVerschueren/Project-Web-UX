@@ -46,8 +46,24 @@ body {
   -webkit-box-align: center;
   align-items: center; }
 
-.modal {
-  margin-top: 5%; }
+.modal-dialog {
+  height: 50%; }
+
+.modal-content {
+  height: 100%; }
+
+.modal-body {
+  height: 70%;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center; }
+
+.modal-body a {
+  width: 45%;
+  height: 100%; }
 
 /*  HOMEPAGE  ---------------------------------------------------------------------*/
 .homepage {
@@ -65,10 +81,10 @@ body {
   -webkit-box-pack: center;
   justify-content: center; }
 
-.container-left {
+.homepage .container-left {
   background-image: url("http://farm3.staticflickr.com/2875/9069037713_1752f5daeb.jpg"); }
 
-.container-right {
+.homepage .container-right {
   background-image: url("http://farm3.staticflickr.com/2813/9069585985_80da8db54f.jpg"); }
 
 .container-left a,
@@ -89,20 +105,18 @@ body {
   width: 100%;
   -webkit-box-pack: justify;
   justify-content: space-between;
-  margin-bottom: 5%; }
-
-.offer:nth-child(1) {
-  margin-top: 5%; }
+  margin-bottom: 3%; }
 
 .offer .title_offer {
   width: 100%; }
 
 .offer .info_offer {
-  width: 100%; }
+  width: 90%;
+  margin: 0 auto; }
 
 .offer .left {
-  -webkit-box-flex: 2;
-  flex: 2; }
+  -webkit-box-flex: 4;
+  flex: 4; }
 
 .offer .left img {
   display: block;
@@ -110,8 +124,8 @@ body {
   height: auto; }
 
 .offer .right {
-  -webkit-box-flex: 10;
-  flex: 10;
+  -webkit-box-flex: 8;
+  flex: 8;
   padding-left: 5%;
   display: -webkit-box;
   display: flex;
@@ -6113,7 +6127,7 @@ small screens.
 /*
 Hides the menu at `48em`, but modify this based on your app's needs.
 */
-@media (min-width: 48em) {
+@media (min-width: 72em) {
   #layout {
     padding-left: 200px;
     /* left col width "#menu" */
@@ -6128,7 +6142,7 @@ Hides the menu at `48em`, but modify this based on your app's needs.
   #layout.active .menu-link {
     left: 200px; } }
 
-@media (max-width: 48em) {
+@media (max-width: 72em) {
   /* Only apply this when the window is small. Otherwise, the following
     case results in extra padding on the left:
         * Make the window small.
@@ -6140,13 +6154,23 @@ Hides the menu at `48em`, but modify this based on your app's needs.
     left: 200px; }
   #main {
     width: 95%; }
-  .homepage {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    flex-direction: column; }
+  .content {
+    padding-bottom: 2.5em; }
   .container-left,
   .container-right {
     width: 100%; } }
+
+@media (max-width: 48em) {
+  /* Only apply this when the window is small. Otherwise, the following
+    case results in extra padding on the left:
+        * Make the window small.
+        * Tap the menu to trigger the active state.
+        * Make the window large again.
+    */
+  .homepage {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column; } }
 
 /* -- Modal Login adn Register ------------------------------------- */
 /* Container */
@@ -6255,10 +6279,28 @@ Hides the menu at `48em`, but modify this based on your app's needs.
   /* Alt Card */ }
 
 .card:first-child {
+  width: 96%;
   background: #fafafa;
   height: 10px;
   border-radius: 5px 5px 0 0;
-  margin: 0 10px;
+  margin: 0 auto;
+  margin-top: 3%;
+  padding: 0; }
+
+.buy_page .card:nth-child(odd) {
+  width: 96%;
+  background: #fafafa;
+  height: 10px;
+  border-radius: 5px 5px 0 0;
+  margin: 0 auto;
+  padding: 0; }
+
+.offer_page .card:nth-child(even) {
+  width: 96%;
+  background: #fafafa;
+  height: 10px;
+  border-radius: 5px 5px 0 0;
+  margin: 0 auto;
   padding: 0; }
 
 .card .title {

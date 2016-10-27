@@ -38,7 +38,6 @@ $(document).ready(function() {
             dataType: "json"
         })
         .done(function(data) {
-            $('.alert-success').removeClass('hidden');
             $('#myModal').modal('hide');
         })
         .fail(function(data) {
