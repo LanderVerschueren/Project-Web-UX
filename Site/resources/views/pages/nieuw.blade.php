@@ -23,7 +23,7 @@
                                     <label for="aantal" class="col-md-4 control-label">aantal</label>
 
                                     <div class="col-md-6">
-                                        <input id="aantal" type="integer" class="form-control" name="aantal" value="{{ old('aantal') }}" required autofocus>
+                                        <input id="aantal" type="number" class="form-control" name="aantal" value="{{ old('aantal') }}" required autofocus>
                                     </div>
                                 </div>
 
@@ -31,7 +31,7 @@
                                     <label for="prijs" class="col-md-4 control-label">prijs</label>
 
                                     <div class="col-md-6">
-                                        <input id="prijs" type="integer" class="form-control" name="prijs" value="{{ old('prijs') }}" required>
+                                        <input id="prijs" type="number" class="form-control" name="prijs" value="{{ old('prijs') }}" required>
                                     </div>
                                 </div>
 

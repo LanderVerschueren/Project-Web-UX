@@ -5,9 +5,6 @@
 @section('content')
 
 <div class="panel panel-default">
-    <div class="panel-heading">
-        <h1>Users</h1>
-    </div>
     <div class="panel-body table-responsive">
         <table class="table table-hover">
             <thead>

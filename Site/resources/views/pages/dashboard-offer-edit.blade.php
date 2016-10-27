@@ -9,30 +9,30 @@
     </div>
     <div class="panel-body">
         {!! Form::model($offer, ['url' => ['/editOffer', $offer->id], 'files' => true]) !!}
-        <div class="form-group">
-            {!! Form::label('naam', 'Naam:', ['class' => 'control-label']) !!}
-            {!! Form::text('naam', null, array('required', 'class' => 'form-control', 'placeholder' => 'Naam')) !!}
-        </div>
-        <div class="form-group">
-            {!! Form::label('aantal', 'Aantal:', ['class' => 'control-label']) !!}
-            {!! Form::text('aantal', null, array('required', 'class' => 'form-control', 'placeholder' => 'Aantal')) !!}
-        </div>
-        <div class="form-group">
-            {!! Form::label('prijs', 'Prijs:', ['class' => 'control-label']) !!}
-            {!! Form::text('prijs', null, array('required', 'class' => 'form-control', 'placeholder' => 'Prijs')) !!}
-        </div>
-        <div class="form-group">
-            <!-- IMAGE PREVIEW -->
-            {!! Form::label('foto', 'Foto:', ['class' => 'control-label']) !!}
-            {!! Form::file('foto', null, array('required', 'class' => 'form-control')) !!}
-            {!! Form::label('foto2', 'Foto:', ['class' => 'control-label']) !!}
-            {!! Form::file('foto2', null, array('required', 'class' => 'form-control')) !!}
-            {!! Form::label('foto3', 'Foto:', ['class' => 'control-label']) !!}
-            {!! Form::file('foto3', null, array('required', 'class' => 'form-control')) !!}
-        </div>
-        <div class="form-group">
-            {!! Form::submit('Sla offer op') !!}
-        </div>
+            <div class="form-group">
+                {!! Form::label('naam', 'Naam:', ['class' => 'control-label']) !!}
+                {!! Form::text('naam', null, array('required', 'class' => 'form-control', 'placeholder' => 'Naam')) !!}
+            </div>
+            <div class="form-group">
+                {!! Form::label('aantal', 'Aantal:', ['class' => 'control-label']) !!}
+                {!! Form::text('aantal', null, array('required', 'class' => 'form-control', 'placeholder' => 'Aantal')) !!}
+            </div>
+            <div class="form-group">
+                {!! Form::label('prijs', 'Prijs:', ['class' => 'control-label']) !!}
+                {!! Form::text('prijs', null, array('required', 'class' => 'form-control', 'placeholder' => 'Prijs')) !!}
+            </div>
+            <div class="form-group">
+                <!-- IMAGE PREVIEW -->
+                {!! Form::label('foto', 'Foto:', ['class' => 'control-label']) !!}
+                {!! Form::file('foto', null, array('required', 'class' => 'form-control')) !!}
+                {!! Form::label('foto2', 'Foto:', ['class' => 'control-label']) !!}
+                {!! Form::file('foto2', null, array('required', 'class' => 'form-control')) !!}
+                {!! Form::label('foto3', 'Foto:', ['class' => 'control-label']) !!}
+                {!! Form::file('foto3', null, array('required', 'class' => 'form-control')) !!}
+            </div>
+            <div class="form-group">
+                {!! Form::submit('Sla offer op') !!}
+            </div>
         {!! Form::close() !!}
     </div>
 </div>

@@ -21,7 +21,6 @@ Route::get('/offer', 'VerkoopController@index');
 Route::get('/offer/{id}', 'KoopController@detail');
 Route::get('/buy', 'KoopController@index');
 Route::get('/nieuw', 'VerkoopController@nieuw');
-Route::get('/dashboard', 'dashboardController@index');
 Route::get('protected', ['middleware' => ['auth', 'admin'], function(){
     return "this page requires that you be logged in as Admin";
 }]);

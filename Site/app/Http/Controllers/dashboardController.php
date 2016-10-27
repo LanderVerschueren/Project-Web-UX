@@ -19,11 +19,6 @@ class dashboardController extends Controller
         $this->middleware('admin');
     }
 
-    public function index()
-    {
-        return view('pages.dashboard');
-    }
-
     public function users()
     {
         $users = User::withTrashed()->get();
