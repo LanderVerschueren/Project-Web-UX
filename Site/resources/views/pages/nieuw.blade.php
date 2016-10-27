@@ -8,17 +8,7 @@
             <div class="col-md-12">
                 <div class="panel panel-default">
                     <div class="panel-body text-center">
-                            {!! Form::open([ 'url' => 'nieuw' ]) !!}
-                                //
-                            {!! Form::close() !!}
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-@endsection
-
-<form action="nieuw" method="post" enctype="multipart/form-data">
+                    <form action="nieuw" method="post" enctype="multipart/form-data">
                                 {{ csrf_field() }}
 
                                 <div class="form-group">
@@ -71,3 +61,16 @@
 
 
                             </form>
+                            
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+@endsection
+
+<!--
+{!! Form::open([ 'url' => 'nieuw' ]) !!}
+                                //
+                            {!! Form::close() !!}
+-->
