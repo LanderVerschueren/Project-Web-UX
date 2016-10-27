@@ -12,6 +12,14 @@ var t=this.name,e=this.descriptor;if(("cloak"!==t||this.vm._isCompiled)&&this.el
 $(document).ready(function() {
 	//$.material.init();
 
+	$('.toggle').on('click', function() {
+		$('.container_card').stop().addClass('active');
+	});
+
+	$('.close').on('click', function() {
+		$('.container_card').stop().removeClass('active');
+	});
+
 	$('#login').click(function() {
         $('#loginModal').modal();
         console.log("login click");
