@@ -33,7 +33,7 @@
                     <td>{{ $offer->foto }}</td>
                     <td>{{ $offer->foto2 }}</td>
                     <td>{{ $offer->foto3 }}</td>
-                    <td><a href="user/{id}">{{ $users->find($offer->user_id)->achternaam . $users->find($offer->user_id)->voornaam }}</a></td>
+                    <td><a href="user/{id}">{{ $users->find($offer->user_id)->achternaam . " " . $users->find($offer->user_id)->voornaam }}</a></td>
                     @if($offer->deleted_at == null)
                     <td>Nee</td>
                     @else

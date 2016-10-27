@@ -32,8 +32,8 @@ class dashboardController extends Controller
 
     public function offers()
     {
-        $offers = Offer::withTrashed()->get();
-        $users = User::withTrashed()->get();
+        $offers = Offer::all();
+        $users = User::all();
         return view('pages.dashboard-offers', ['offers' => $offers, 'users' => $users]);
     }
 
@@ -133,18 +133,10 @@ class dashboardController extends Controller
 
     public function offerReAdd($id)
     {
-        $user = User::withTrashed()->where('id', $id)->first();
-        if($user->deleted_at == null)
+        $offer = Offer::onlyTrashed()->where('id', $id)->first();
+        if($offer != null)
         {
-            $offer = Offer::onlyTrashed()->where('id', $id)->first();
-            if($offer != null)
-            {
-                $offer->restore();
-            }
-        }
-        else
-        {
-            
+            $offer->restore();
         }
 
         return redirect('dashboard/offers');
