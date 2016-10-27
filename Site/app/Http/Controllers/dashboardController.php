@@ -26,7 +26,7 @@ class dashboardController extends Controller
 
     public function users()
     {
-        $users = User::all();
+        $users = User::withTrashed()->get();
         return view('pages.dashboard-users', ['users' => $users]);
     }
 
@@ -49,14 +49,22 @@ class dashboardController extends Controller
 
     public function userDelete($id)
     {
-
+        $user = User::findOrFail($id);
+        if($user != null)
+        {
+            $user->delete();
+        }
 
         return redirect('dashboard/users');
     }
 
     public function offerDelete($id)
     {
-
+        $offer = Offer::findOrFail($id);
+        if($offer != null)
+        {
+            $offer->delete();
+        }
 
         return redirect('dashboard/offers');
     }
@@ -91,5 +99,27 @@ class dashboardController extends Controller
 
         $user->save();
         return redirect('dashboard/users');
+    }
+
+    public function userReAdd($id)
+    {
+        $user = User::onlyTrashed()->where('id', $id)->first();
+        if($user != null)
+        {
+            $user->restore();
+        }
+
+        return redirect('dashboard/users');
+    }
+
+    public function offerReAdd($id)
+    {
+        $offer = Offer::findOrFail($id);
+        if($offer != null)
+        {
+            $offer->restore();
+        }
+
+        return redirect('dashboard/offers');
     }
 }
