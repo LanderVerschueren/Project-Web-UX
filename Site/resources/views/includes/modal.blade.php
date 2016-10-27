@@ -35,7 +35,8 @@
       <h1 class="title">Registreren
         <div class="close"></div>
       </h1>
-      <form>
+      <form role="form" method="POST" action="{{ url('/register') }}">
+        {{ csrf_field() }}
         <div class="input-container">
           <input id="voornaam" type="text" name="voornaam" value="{{ old('voornaam') }}" required autofocus/>
           <label for="voornaam">Voornaam</label>
