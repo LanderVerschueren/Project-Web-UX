@@ -18,6 +18,7 @@ class User extends Authenticatable
         'voornaam', 'achternaam', 'email', 'adres', 'woonplaats', 'postcode', 'admin', 'password',
     ];
 
+    protected $softDelete = true;
     /**
      * The attributes that should be hidden for arrays.
      *

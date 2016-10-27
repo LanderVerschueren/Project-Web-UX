@@ -11,6 +11,8 @@ class Offer extends Model
         'naam', 'aantal', 'prijs', 'foto', 'foto2', 'foto3'
     ];
 
+    protected $softDelete = true;
+
     public function user()
     {
         return $this->belongsTo('App\User');
