@@ -6,7 +6,7 @@
       <form role="form" method="POST" action="{{ url('/login') }}">
         {{ csrf_field() }}
         <div class="input-container">
-          <input id="email" type="email" name="email" value="{{ old('email') }}" required autofocus/>
+          <input id="email" type="email text" name="email" value="{{ old('email') }}" required autofocus/>
           <label for="email">E-mail Adres</label>
           <div class="bar"></div>
           @if ($errors->has('email'))
