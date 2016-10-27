@@ -31,6 +31,11 @@ class VerkoopController extends Controller
         return view('pages.nieuw');
     }
 
+    public function fotoToevoegen(Request $request, $fotonummer)
+    {
+
+    }
+
     public function nieuwOffer(Request $request)
     {
         $offer = new Offer();

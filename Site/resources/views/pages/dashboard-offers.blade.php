@@ -39,7 +39,11 @@
                     @else
                     <td>Ja</td>
                     @endif
-                    <td><a href=""><i class="fa fa-times-circle fa-lg" style="cursor: pointer;color: red" aria-hidden="true"></i></a></td>
+                    @if($offer->deleted_at == null)
+                        <td><a href="\dashboard\offers\delete\{{ $offer->id }}"><i class="fa fa-times-circle fa-lg" style="cursor: pointer;color: red" aria-hidden="true"></i></a></td>
+                    @else
+                        <td><a href="\dashboard\offers\re_add\{{ $offer->id }}"><i class="fa fa-plus-circle fa-lg" style="cursor: pointer;color: green" aria-hidden="true"></i></a></td>
+                    @endif
                     <td><a href="\dashboard\offers\edit\{{ $offer->id }}"><i class="fa fa-pencil-square-o fa-lg" style="cursor: pointer;color: green" aria-hidden="true"></i></a></td>
                 </tr>
                 @endforeach
