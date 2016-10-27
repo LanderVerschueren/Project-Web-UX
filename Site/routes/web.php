@@ -34,6 +34,7 @@ Route::get('/dashboard/users/delete/{id}', 'dashboardController@userDelete');
 Route::get('/dashboard/offers/delete/{id}', 'dashboardController@offerDelete');
 Route::get('/dashboard/users/re_add/{id}', 'dashboardController@userReAdd');
 Route::get('/dashboard/offers/re_add/{id}', 'dashboardController@offerReAdd');
+Route::get('/user/{id}', 'userController@userpage');
 
 Route::post('/nieuw', 'VerkoopController@nieuwOffer');
 Route::post('/editOffer/{id}', 'dashboardController@editOffer');

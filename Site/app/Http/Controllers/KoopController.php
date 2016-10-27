@@ -25,7 +25,8 @@ class KoopController extends Controller
 
     public function detail($id) {
         $offer = Offer::find($id);
+        $user = User::where('id', $offer->user_id)->first();
 
-        return view('pages.buy_detail', ['offer' => $offer]);
+        return view('pages.buy_detail', ['offer' => $offer, 'user' => $user]);
     }
 }

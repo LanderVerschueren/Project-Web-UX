@@ -8,6 +8,8 @@
         @if($offers->where('user_id', Auth::user()->id)->count() > 0)
             <h2>Jou toegevoegde offers</h2>
 
+            <a href="/nieuw">Voeg aanbieding toe</a>
+
             @foreach($offers as $offer)
                 @if($offer->user_id == Auth::user()->id)
                 <div class="offer container_column panel panel-default">
@@ -24,13 +26,13 @@
                         </div>
                     </div>
                     <div class="panel-footer">
-                        <a href="/dashboard/offers/edit/{{ $offer->id }}">Pas aanbieding aan</a>
+                        <a href="/offer/{{ $offer->id }}">Bekijk aanbieding</a>
                     </div>
                 </div>   
                 @endif 
             @endforeach
         @else
-            <h1>Er zijn nog geen aanbiedingen toegevoegd</h1>
+            <h1>Er zijn nog geen aanbiedingen toegevoegd op de site.</h1>
         @endif
     @endif
 </div>
