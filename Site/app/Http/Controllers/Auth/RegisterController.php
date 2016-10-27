@@ -6,6 +6,7 @@ use App\User;
 use Validator;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Http\Request;
 
 class RegisterController extends Controller
 {
@@ -74,6 +75,7 @@ class RegisterController extends Controller
             'postcode' => $data['postcode'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
+            'admin' => false,
         ]);
     }
 

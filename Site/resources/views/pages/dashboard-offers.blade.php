@@ -33,13 +33,17 @@
                     <td>{{ $offer->foto }}</td>
                     <td>{{ $offer->foto2 }}</td>
                     <td>{{ $offer->foto3 }}</td>
-                    <td><a href="user/{id}">{{ $users->find($offer->user_id)->achternaam . $users->find($offer->user_id)->voornaam }}</a></td>
+                    <td><a href="user/{id}">{{ $users->find($offer->user_id)->achternaam . " " . $users->find($offer->user_id)->voornaam }}</a></td>
                     @if($offer->deleted_at == null)
                     <td>Nee</td>
                     @else
                     <td>Ja</td>
                     @endif
-                    <td><a href=""><i class="fa fa-times-circle fa-lg" style="cursor: pointer;color: red" aria-hidden="true"></i></a></td>
+                    @if($offer->deleted_at == null)
+                        <td><a href="\dashboard\offers\delete\{{ $offer->id }}"><i class="fa fa-times-circle fa-lg" style="cursor: pointer;color: red" aria-hidden="true"></i></a></td>
+                    @else
+                        <td><a href="\dashboard\offers\re_add\{{ $offer->id }}"><i class="fa fa-plus-circle fa-lg" style="cursor: pointer;color: green" aria-hidden="true"></i></a></td>
+                    @endif
                     <td><a href="\dashboard\offers\edit\{{ $offer->id }}"><i class="fa fa-pencil-square-o fa-lg" style="cursor: pointer;color: green" aria-hidden="true"></i></a></td>
                 </tr>
                 @endforeach
