@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Offer;
-use Illuminate\Support\Facades\Request;
+use Illuminate\Http\Request;
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\UploadedFile;
@@ -34,56 +34,53 @@ class VerkoopController extends Controller
     public function nieuwOffer(Request $request)
     {
         $offer = new Offer();
-        $offer->naam = $request::Input('naam');
-        $offer->aantal = $request::Input('aantal');
-        $offer->prijs = $request::Input('prijs');
+        $offer->naam = $request->input('naam');
+        $offer->aantal = $request->input('aantal');
+        $offer->prijs = $request->input('prijs');
         $offer->user_id = Auth::user()->id;
 
         $errors = [];
 
-        if (Request::hasFile('foto'))
+
+
+        if ($request->hasFile('foto'))
         {
-            if(Request::file('foto')->isValid())
+            if($request->file('foto')->isValid())
             {
-                $extension = Request::file('foto')->getClientOriginalExtension();
-                if($extension == 'jpg' || $extension == 'jpeg' || $extension == 'jpe' || $extension = 'png')
-                {
-                    $image = Request::file('foto');
+                $this->validate($request, [
+                    'foto' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:1024',
+                    'foto2' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:1024',
+                    'foto3' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:1024',
+                ]);
+                    $image = $request->file('foto');
                     $destinationPath = 'images';
-                    $imageName = Auth::user()->id . "-" . strval(Offer::all()->count()+1) . "-1." . $extension;
-                    Request::file('foto')->move($destinationPath, $imageName);
+                    $imageName = Auth::user()->id . "-" . strval(Offer::all()->count()+1) . "-1." . $image->getClientOriginalExtension();
+                    $request->file('foto')->move($destinationPath, $imageName);
                     $offer->foto = $imageName;
 
-                    if (Request::hasFile('foto2'))
+                    if ($request->hasFile('foto2'))
                     {
-                        if(Request::file('foto2')->isValid())
+                        if($request->file('foto2')->isValid())
                         {
-                            $extension = Request::file('foto2')->getClientOriginalExtension();
-                            if($extension == 'jpg' || $extension == 'jpeg' || $extension == 'jpe' || $extension = 'png')
-                            {
-                                $image = Request::file('foto2');
+
+                                $image = $request->file('foto2');
                                 $destinationPath = 'images';
-                                $imageName = Auth::user()->id . "-" . strval(Offer::all()->count()+1) . "-2." . $extension;
-                                Request::file('foto2')->move($destinationPath, $imageName);
+                                $imageName = Auth::user()->id . "-" . strval(Offer::all()->count()+1) . "-2." . $image->getClientOriginalExtension();
+                                $request->file('foto2')->move($destinationPath, $imageName);
                                 $offer->foto2 = $imageName;
 
-                                if (Request::hasFile('foto3')) {
-                                    if (Request::file('foto3')->isValid()) {
-                                        $extension = Request::file('foto3')->getClientOriginalExtension();
-                                        if ($extension == 'jpg' || $extension == 'jpeg' || $extension == 'jpe' || $extension = 'png') {
-                                            $image = Request::file('foto3');
+                                if ($request->hasFile('foto3')) {
+                                    if ($request->file('foto3')->isValid()) {
+                                            $image = $request->file('foto3');
                                             $destinationPath = 'images';
-                                            $imageName = Auth::user()->id . "-" . strval(Offer::all()->count() + 1) . "-3." . $extension;
-                                            Request::file('foto3')->move($destinationPath, $imageName);
+                                            $imageName = Auth::user()->id . "-" . strval(Offer::all()->count() + 1) . "-3." . $image->getClientOriginalExtension();
+                                            $request->file('foto3')->move($destinationPath, $imageName);
                                             $offer->foto3 = $imageName;
 
                                             $offer->save();
                                             $offers = Offer::all();
                                             return view('pages.offer', ['errors' => $errors, 'offers' => $offers]);
-                                        } else {
-                                            $errors['errormessage'] = 'file does not have the correct extension';
-                                            return view('pages.indfex', ['errors' => $errors]);
-                                        }
+
                                     } else {
                                         $errors['errormessage'] = 'file is not valid';
                                         return view('pages.index', ['errors' => $errors]);
@@ -92,12 +89,6 @@ class VerkoopController extends Controller
                                 $offer->save();
                                 $offers = Offer::all();
                                 return view('pages.offer', ['errors' => $errors, 'offers' => $offers]);
-                            }
-                            else
-                            {
-                                $errors['errormessage'] = 'file 2 does not have the correct extension';
-                                return view('pages.index', ['errors' => $errors]);
-                            }
                         }
                         else
                         {
@@ -109,12 +100,6 @@ class VerkoopController extends Controller
                     $offer->save();
                     $offers = Offer::all();
                     return view('pages.offer', ['errors' => $errors, 'offers' => $offers]);
-                }
-                else
-                {
-                    $errors['errormessage'] = 'file does not have the correct extension';
-                    return view('pages.index', ['errors' => $errors]);
-                }
             }
             else
             {

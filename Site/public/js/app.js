@@ -53,4 +53,26 @@ $(document).ready(function() {
         $('#dashboardModal').modal();
         console.log("login click");
     });
+
+    $('#input1').on('change',function(){
+        if($('#input1').val() != null)
+        {
+            $('#input2').show();
+        }
+        else
+        {
+            $('#input2').hide();
+        }
+    });
+
+    $('#input2').on('change', function(){
+        if($('#input2').val() != null)
+        {
+            $('#input3').show();
+        }
+        else
+        {
+            $('#input3').hide();
+        }
+    });
 })

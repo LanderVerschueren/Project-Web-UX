@@ -36,19 +36,19 @@
                                 </div>
 
                                 <div>
-                                    <div class="col-md-4">
+                                    <div class="col-md-4" id="input1">
                                         <br><br>
                                         <label>Select image to upload:</label><br>
                                         <input type="file" name="foto" accept="image/jpeg, image/png" id="foto">
 
                                     </div>
-                                    <div class="col-md-4">
+                                    <div class="col-md-4" id="input2" style="display: none;">
                                         <br><br>
                                         <label>Select image to upload:</label><br>
                                         <input type="file" name="foto2" accept="image/jpeg, image/png" id="foto2">
 
                                     </div>
-                                    <div class="col-md-4">
+                                    <div class="col-md-4" id="input3" style="display: none;">
                                         <br><br>
                                         <label>Select image to upload:</label><br>
                                         <input type="file" name="foto3" accept="image/jpeg, image/png" id="foto3">

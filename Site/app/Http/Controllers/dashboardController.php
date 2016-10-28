@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\User;
 use App\Offer;
 use Illuminate\Http\Request;
+use File;
 
 use App\Http\Requests;
 use Illuminate\Support\Facades\DB;
@@ -87,28 +88,51 @@ class dashboardController extends Controller
         {
             if($request->file('foto')->isValid())
             {
-                $offer->foto = $request->file('foto');
-            }
-        }
+                $this->validate($request, [
+                    'foto' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:1024',
+                    'foto2' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:1024',
+                    'foto3' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:1024',
+                ]);
 
-        for($i = 2; $i <= 3; $i++)
-        {
-            if($request->hasFile('foto' . $i))
-            {
-                if ($request->file('foto' . $i)->isValid())
-                {
-                    $offer->foto . $id = $request->file('foto' . $i);
-                }
-                else
-                {
-                    dd('file not valid: ' . $id);
-                    //return redirect('dashboard/offers');
-                }
-            }
-            else
-            {
-                dd('file not found: ' . $id);
-                //return redirect('dashboard/offers');
+                    $image = $request->file('foto');
+                    $destinationPath = 'images';
+                    $imageName = $offer->user_id . "-" . $offer->id . "-1." . $image->getClientOriginalExtension();
+
+                    //delete foto that was already there
+                    File::delete('images/' . $imageName);
+
+                    $request->file('foto')->move($destinationPath, $imageName);
+                    $offer->foto = $imageName;
+
+                    //volgende fotos
+
+                        if($request->hasFile('foto2')){
+                            if ($request->file('foto2')->isValid()){
+                                    $image = $request->file('foto2');
+                                    $destinationPath = 'images';
+                                    $imageName = $offer->user_id . "-" . $offer->id . "-2." . $extension;
+
+                                    //delete foto that was already there
+                                    File::delete('images/' . $imageName);
+
+                                    $request->file('foto2')->move($destinationPath, $imageName);
+                                    $offer->foto2 = $imageName;
+
+                                    if($request->hasFile('foto3')){
+                                        if ($request->file('foto3')->isValid()){
+                                                $image = $request->file('foto3');
+                                                $destinationPath = 'images';
+                                                $imageName = $offer->user_id . "-" . $offer->id . "-3." . $extension;
+
+                                                //delete foto that was already there
+                                                File::delete('images/' . $imageName);
+
+                                                $request->file('foto3')->move($destinationPath, $imageName);
+                                                $offer->foto3 = $imageName;
+                                        }else{  dd('file not valid: 3');    }
+                                    }
+                            }else{  dd('file not valid: 2');    }
+                        }
             }
         }
 
