@@ -23,12 +23,33 @@
             </div>
             <div class="form-group">
                 <!-- IMAGE PREVIEW -->
-                {!! Form::label('foto', 'Foto:', ['class' => 'control-label']) !!}
-                {!! Form::file('foto', null, array('required', 'class' => 'form-control')) !!}
-                {!! Form::label('foto2', 'Foto:', ['class' => 'control-label']) !!}
-                {!! Form::file('foto2', null, array('required', 'class' => 'form-control')) !!}
-                {!! Form::label('foto3', 'Foto:', ['class' => 'control-label']) !!}
-                {!! Form::file('foto3', null, array('required', 'class' => 'form-control')) !!}
+                <div class="col-md-4">
+                    @if($offer->foto != null)
+                        <img class="temporary" src="/images/{{ $offer->foto }}">
+                    @else
+                        <img class="temporary" src="/img/noImage.png">
+                    @endif
+                    {!! Form::label('foto', 'Foto:', ['class' => 'control-label']) !!}
+                    {!! Form::file('foto', null, array('required', 'class' => 'form-control')) !!}
+                </div>
+                <div class="col-md-4">
+                    @if($offer->foto2 != null)
+                        <img class="temporary" src="/images/{{ $offer->foto2 }}">
+                    @else
+                        <img class="temporary" src="/img/noImage.png">
+                    @endif
+                    {!! Form::label('foto2', 'Foto:', ['class' => 'control-label']) !!}
+                    {!! Form::file('foto2', null, array('required', 'class' => 'form-control')) !!}
+                </div>
+                <div class="col-md-4">
+                    @if($offer->foto3 != null)
+                        <img class="temporary" src="/images/{{ $offer->foto3 }}">
+                    @else
+                        <img class="temporary" src="/img/noImage.png">
+                    @endif
+                    {!! Form::label('foto3', 'Foto:', ['class' => 'control-label']) !!}
+                    {!! Form::file('foto3', null, array('required', 'class' => 'form-control')) !!}
+                </div>
             </div>
             <div class="form-group">
                 {!! Form::submit('Sla offer op') !!}
