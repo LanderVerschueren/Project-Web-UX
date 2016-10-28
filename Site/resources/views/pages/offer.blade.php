@@ -33,5 +33,6 @@
             <h1>Er zijn nog geen aanbiedingen toegevoegd</h1>
         @endif
     @endif
+    <a href="/nieuw">Post nieuwe aanbieding</a>
 </div>
 @endsection

@@ -78,7 +78,8 @@ class VerkoopController extends Controller
                                             $offer->foto3 = $imageName;
 
                                             $offer->save();
-                                            return view('pages.offer', ['errors' => $errors]);
+                                            $offers = Offer::all();
+                                            return view('pages.offer', ['errors' => $errors, 'offers' => $offers]);
                                         } else {
                                             $errors['errormessage'] = 'file does not have the correct extension';
                                             return view('pages.indfex', ['errors' => $errors]);
@@ -88,9 +89,9 @@ class VerkoopController extends Controller
                                         return view('pages.index', ['errors' => $errors]);
                                     }
                                 }
-
                                 $offer->save();
-                                return view('pages.offer', ['errors' => $errors]);
+                                $offers = Offer::all();
+                                return view('pages.offer', ['errors' => $errors, 'offers' => $offers]);
                             }
                             else
                             {
@@ -106,7 +107,8 @@ class VerkoopController extends Controller
                     }
 
                     $offer->save();
-                    return view('pages.offer', ['errors' => $errors]);
+                    $offers = Offer::all();
+                    return view('pages.offer', ['errors' => $errors, 'offers' => $offers]);
                 }
                 else
                 {

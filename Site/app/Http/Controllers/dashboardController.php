@@ -74,11 +74,45 @@ class dashboardController extends Controller
         return redirect('dashboard/offers');
     }
 
-    public function editOffer($id)
+    public function editOffer(Request $request, $id)
     {
         //code voor saven van geupdate offer
+        $offer = Offer::find($id);
 
+        $offer->naam = $request->input('naam');
+        $offer->aantal = $request->input('aantal');
+        $offer->prijs = $request->input('prijs');
 
+        if($request->hasFile('foto'))
+        {
+            if($request->file('foto')->isValid())
+            {
+                $offer->foto = $request->file('foto');
+            }
+        }
+
+        for($i = 2; $i <= 3; $i++)
+        {
+            if($request->hasFile('foto' . $i))
+            {
+                if ($request->file('foto' . $i)->isValid())
+                {
+                    $offer->foto . $id = $request->file('foto' . $i);
+                }
+                else
+                {
+                    dd('file not valid: ' . $id);
+                    //return redirect('dashboard/offers');
+                }
+            }
+            else
+            {
+                dd('file not found: ' . $id);
+                //return redirect('dashboard/offers');
+            }
+        }
+
+        $offer->save();
         return redirect('dashboard/offers');
     }
 
