@@ -134,10 +134,12 @@
       <h1 class="title">Dashboard</h1>
         <div class="button-container">
           <div class="container_row">
-            {{--<button><span>Users</span></button>--}}
-            {{--<button><span>Offers</span></button>--}}
-              <a class="btn btn-primary" href="/dashboard/users">Users</a>
-              <a class="btn btn-primary" href="/dashboard/offers">Offers</a>
+              <div class="button">
+                <a href="/dashboard/users">Users</a>
+              </div>
+              <div class="button">
+                <a href="/dashboard/offers">Offers</a>
+              </div>
           </div>
         </div>
     </div>
