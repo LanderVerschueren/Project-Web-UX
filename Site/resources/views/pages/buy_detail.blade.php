@@ -33,7 +33,7 @@
 					@endif
 				</div>
 			</div>
-
+			@if($boughtFromUser->id != $buyingUser->id)
 			<form action="/buyOffer/{{$offer->id}}" method="post" enctype="multipart/form-data">
 				{{ csrf_field() }}
 				@if($error == '')
@@ -46,6 +46,7 @@
 
 				<input type="submit" value="Buy amount" name="submit">
 			</form>
+			@endif
 		</div>
 	</div>
 @endsection

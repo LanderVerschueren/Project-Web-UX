@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Message;
 use Illuminate\Http\Request;
 use App\Offer;
 use App\User;
@@ -40,7 +41,7 @@ class KoopController extends Controller
         $error = '';
 
         $this->validate($request, [
-            'aantal' => 'required|integer|max:100'
+            'aantal' => 'required|integer'
         ]);
 
         $userWantsAmount = $request->input('aantal');
@@ -50,11 +51,31 @@ class KoopController extends Controller
             //User buys the offer
             $offer->aantal -= $userWantsAmount;
             $offer->save();
+
+            $messageToSeller = new Message();
+            $messageToSeller->message = $buyingUser->voornaam . ' ' . $buyingUser->achternaam . ' heeft net ' . $userWantsAmount . ' stuks van jou ' . $offer->naam . ' besteld.';
+            $messageToSeller->user_id = $boughtFromUser->id;
+            $messageToSeller->sender_id = $buyingUser->id;
+            $messageToSeller->save();
+
+            $messageToBuyer = new Message();
+            $messageToBuyer->message = 'Je hebt net ' . $userWantsAmount . ' ' . $offer->naam . ' besteld van ' . $boughtFromUser->voornaam . ' ' . $boughtFromUser->achternaam;
+            $messageToBuyer->user_id = $buyingUser->id;
+            $messageToBuyer->sender_id = $boughtFromUser->id;
+            $messageToBuyer->save();
+
             if($offer->aantal == 0)
             {
+                $messageToSeller->message = 'Je offer is helemaal verkocht en word verwijderd uit de database';
+                $messageToSeller->user_id = $boughtFromUser->id;
+                $messageToSeller->sender_id = null;
+                $messageToSeller->save();
+
                 $offer->delete();
             }
 
+
+            return redirect()->to('/home');
         }
         else
         {
