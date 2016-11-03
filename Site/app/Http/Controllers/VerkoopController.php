@@ -33,6 +33,12 @@ class VerkoopController extends Controller
 
     public function nieuwOffer(Request $request)
     {
+        $this->validate($request, [
+            'naam' => 'required|max:1024',
+            'aantal' => 'required|integer|max:100',
+            'prijs' => 'required|integer|max:50',
+        ]);
+
         $offer = new Offer();
         $offer->naam = $request->input('naam');
         $offer->aantal = $request->input('aantal');

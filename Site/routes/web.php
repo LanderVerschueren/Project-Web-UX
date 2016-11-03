@@ -38,3 +38,5 @@ Route::get('/user/{id}', 'userController@userpage');
 Route::post('/nieuw', 'VerkoopController@nieuwOffer');
 Route::post('/editOffer/{id}', 'dashboardController@editOffer');
 Route::post('/editUser/{id}', 'dashboardController@editUser');
+
+Route::post('/buyOffer/{id}', 'koopController@buyOffer');
