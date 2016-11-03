@@ -105,7 +105,17 @@ body {
 .container-right a:hover {
   text-decoration: none; }
 
-/*  BUY  ---------------------------------------------------------------------*/
+/*  OFFER and BUY  ---------------------------------------------------------------------*/
+.offer-container {
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  margin-bottom: 1% !important;
+  padding: 0.5%; }
+
+.offer-container .container_row .button {
+  width: 450px !important; }
+
 .offer {
   width: 100%;
   -webkit-box-pack: justify;
@@ -117,7 +127,8 @@ body {
 
 .offer .info_offer {
   width: 90%;
-  margin: 0 auto; }
+  margin: 0 auto;
+  height: 135px; }
 
 .offer .left {
   -webkit-box-flex: 3;
@@ -5964,6 +5975,7 @@ The content `<div>` is where all your content goes.
   height: 80%;
   margin: 0 auto;
   margin-bottom: 0;
+  padding-top: 1%;
   line-height: 1.6em; }
 
 .header {
@@ -6192,9 +6204,7 @@ Hides the menu at `48em`, but modify this based on your app's needs.
 /* Container */
 .container_card {
   position: relative;
-  max-width: 460px;
-  width: 100%;
-  margin: 0 auto 100px; }
+  width: 100%; }
 
 .container_card.active .card:first-child {
   background: #f2f2f2;
@@ -6300,32 +6310,15 @@ Hides the menu at `48em`, but modify this based on your app's needs.
   height: 10px;
   border-radius: 5px 5px 0 0;
   margin: 0 auto;
-  margin-top: 3%;
-  padding: 0; }
-
-.buy_page .card:nth-child(odd) {
-  width: 96%;
-  background: #fafafa;
-  height: 10px;
-  border-radius: 5px 5px 0 0;
-  margin: 0 auto;
-  padding: 0; }
-
-.offer_page .card:nth-child(even) {
-  width: 96%;
-  background: #fafafa;
-  height: 10px;
-  border-radius: 5px 5px 0 0;
-  margin: 0 auto;
   padding: 0; }
 
 .card .title {
   position: relative;
   z-index: 1;
-  border-left: 5px solid #ed2553;
-  margin: 0 0 35px;
-  padding: 10px 0 10px 50px;
-  color: #ed2553;
+  border-left: 5px solid #1E4C88;
+  margin: 0 0 5px;
+  padding: 5px 0 5px 50px;
+  color: #1E4C88;
   font-size: 32px;
   font-weight: 600;
   text-transform: uppercase; }
@@ -6381,7 +6374,7 @@ Hides the menu at `48em`, but modify this based on your app's needs.
 .card .input-container .bar:before, .card .input-container .bar:after {
   content: '';
   position: absolute;
-  background: #ed2553;
+  background: #1E4C88;
   width: 0;
   height: 2px;
   -webkit-transition: .2s ease;
@@ -6396,6 +6389,15 @@ Hides the menu at `48em`, but modify this based on your app's needs.
 .card .button-container {
   margin: 0 60px;
   text-align: center; }
+
+.button-container {
+  margin: 0 auto 1% auto;
+  text-align: center;
+  left: 0;
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: .3s ease;
+  transition: .3s ease; }
 
 .card .button-container button {
   outline: 0;
@@ -6414,7 +6416,7 @@ Hides the menu at `48em`, but modify this based on your app's needs.
   -webkit-transition: .3s ease;
   transition: .3s ease; }
 
-.card .button-container .container_row .button {
+.button-container .container_row .button {
   outline: 0;
   cursor: pointer;
   position: relative;
@@ -6437,7 +6439,7 @@ Hides the menu at `48em`, but modify this based on your app's needs.
   -webkit-transition: .3s ease;
   transition: .3s ease; }
 
-.card .button-container .container_row .button a {
+.button-container .container_row .button a {
   position: relative;
   z-index: 1;
   color: #ddd;
@@ -6447,7 +6449,7 @@ Hides the menu at `48em`, but modify this based on your app's needs.
   width: 100%;
   padding: 20px 0; }
 
-.card .button-container .container_row .button a:hover {
+.button-container .container_row .button a:hover {
   text-decoration: none; }
 
 .card .button-container button:before {
@@ -6456,7 +6458,7 @@ Hides the menu at `48em`, but modify this based on your app's needs.
   top: 50%;
   left: 50%;
   display: block;
-  background: #ed2553;
+  background: #1E4C88;
   width: 30px;
   height: 30px;
   border-radius: 100%;
@@ -6465,13 +6467,13 @@ Hides the menu at `48em`, but modify this based on your app's needs.
   -webkit-transition: .3s ease;
   transition: .3s ease; }
 
-.card .button-container .container_row .button:before {
+.button-container .container_row .button:before {
   content: '';
   position: absolute;
   top: 50%;
   left: 50%;
   display: block;
-  background: #ed2553;
+  background: #1E4C88;
   width: 30px;
   height: 30px;
   border-radius: 100%;
@@ -6481,10 +6483,10 @@ Hides the menu at `48em`, but modify this based on your app's needs.
   transition: .3s ease; }
 
 .card .button-container button:hover, .card .button-container button:active, .card .button-container button:focus {
-  border-color: #ed2553; }
+  border-color: #1E4C88; }
 
 .card .button-container button:hover span, .card .button-container button:active span, .card .button-container button:focus span {
-  color: #ed2553; }
+  color: #1E4C88; }
 
 .card .button-container button:active span, .card .button-container button:focus span {
   color: #ffffff; }
@@ -6494,16 +6496,16 @@ Hides the menu at `48em`, but modify this based on your app's needs.
   -webkit-transform: scale(10);
   transform: scale(10); }
 
-.card .button-container .container_row .button:hover, .card .button-container .container_row .button:active, .card .button-container .container_row .button:focus {
-  border-color: #ed2553; }
+.button-container .container_row .button:hover, .button-container .container_row .button:active, .button-container .container_row .button:focus {
+  border-color: #1E4C88; }
 
-.card .button-container .container_row .button:hover a, .card .button-container .container_row .button:active a, .card .button-container .container_row .button:focus span {
-  color: #ed2553; }
+.button-container .container_row .button:hover a, .button-container .container_row .button:active a, .button-container .container_row .button:focus span {
+  color: #1E4C88; }
 
-.card .button-container .container_row .button:active a, .card .button-container .container_row .button:focus a {
+.button-container .container_row .button:active a, .button-container .container_row .button:focus a {
   color: #ffffff; }
 
-.card .button-container .container_row .button:active:before, .card .button-container .container_row .button:focus:before {
+.button-container .container_row .button:active:before, .button-container .container_row .button:focus:before {
   opacity: 1;
   -webkit-transform: scale(10);
   transform: scale(10); }
@@ -6544,7 +6546,7 @@ Hides the menu at `48em`, but modify this based on your app's needs.
 
 .card.alt .toggle {
   position: relative;
-  background: #ed2553;
+  background: #1E4C88;
   width: 140px;
   height: 140px;
   border-radius: 100%;
@@ -6615,7 +6617,7 @@ Hides the menu at `48em`, but modify this based on your app's needs.
   border-color: #ffffff; }
 
 .card.alt .button-container button span {
-  color: #ed2553; }
+  color: #1E4C88; }
 
 .card.alt .button-container button:hover {
   background: rgba(255, 255, 255, 0.9); }
