@@ -126,7 +126,7 @@ body {
 }
 
 .offer .left {
-  flex: 4;
+  flex: 3;
 }
 
 .offer .left img {
@@ -136,7 +136,7 @@ body {
 }
 
 .offer .right {
-  flex: 8;
+  flex: 9;
   padding-left: 5%;
 
   display: flex;
@@ -235,18 +235,17 @@ The content `<div>` is where all your content goes.
 .content {
   height: 80%;
   margin: 0 auto;
-  max-width: 1200px;
   margin-bottom: 0;
   line-height: 1.6em;
 }
 
 .header {
   height: 20%;
+  min-height: 140px;
   margin: 0;
   color: #333;
   text-align: center;
-  padding: 2.5em 0 0 0;
-  border-bottom: 1px solid #eee;
+  position: relative;
 }
 
 .pure-menu-heading {
@@ -254,8 +253,10 @@ The content `<div>` is where all your content goes.
 }
 
 .header form {
-  max-width: 1200px;
   margin: 0 auto;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 .header form input {
@@ -263,19 +264,29 @@ The content `<div>` is where all your content goes.
   border: none;
   width: 80%;
   height: 50px;
+  float: left;
 }
 
 .header form button {
   padding: 0;
   border: none;
-  width: 19%;
+  width: 20%;
   height: 50px;
+  float: right;
 }
 
 .header h1 {
-  margin: 0.2em 0;
+  margin: 0 0 0.2em 0;
+  min-height: 50px;
+  padding-top: 2%;
+  padding-bottom: 1%;
   font-size: 3em;
   font-weight: 300;
+  background-color: white;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  box-sizing: border-box;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
 .header h2 {
@@ -619,7 +630,7 @@ Hides the menu at `48em`, but modify this based on your app's needs.
   position: relative;
   background: #ffffff;
   border-radius: 5px;
-  padding: 60px 0 40px 0;
+  padding: 20px 0 10px 0;
   box-sizing: border-box;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   -webkit-transition: .3s ease;

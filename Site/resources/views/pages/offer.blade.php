@@ -24,7 +24,11 @@
                         </div>
                     </div>
                     <div class="button-container">
-                      <a href="/offer/{{ $offer->id }}">Bekijk aanbieding</a>
+                        <div class="container_row">
+                            <div class="button">
+                                <a href="/offer/{{ $offer->id }}">Bekijk aanbieding</a>
+                            </div>
+                        </div>
                     </div>
                 </div>     
                 @endif 
