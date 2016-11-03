@@ -38,7 +38,8 @@ body {
   -webkit-box-pack: center;
   justify-content: center;
   -webkit-box-align: center;
-  align-items: center; }
+  align-items: center;
+  width: 100%; }
 
 .container_column {
   display: -webkit-box;
@@ -49,7 +50,8 @@ body {
   -webkit-box-pack: center;
   justify-content: center;
   -webkit-box-align: center;
-  align-items: center; }
+  align-items: center;
+  width: 100%; }
 
 .modal-dialog {
   height: 50%; }
