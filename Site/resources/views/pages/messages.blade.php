@@ -16,14 +16,16 @@
         <h1>You haven't received any messages yet</h1>
     @endif
 
-    {{ Form::open(array('url' => '/message/send')) }}
-        {{ csrf_field() }}
-        {!! Form::label('sender', 'sender:') !!}
-        {!! Form::select('sender', $usersList) !!}
+    <div>
+        {{ Form::open(array('url' => '/message/send')) }}
+            {{ csrf_field() }}
+            {!! Form::label('sender', 'sender:') !!}
+            {!! Form::select('sender', $usersList) !!}
 
-        {!! Form::label('message', 'Message:') !!}
-        {!! Form::textarea('message') !!}
+            {!! Form::label('message', 'Message:') !!}
+            {!! Form::textarea('message') !!}
 
-        {!! Form::submit('send message') !!}
-    {{ Form::close() }}
+            {!! Form::submit('send message') !!}
+        {{ Form::close() }}
+    </div>
 @endsection
