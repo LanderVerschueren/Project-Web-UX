@@ -35,7 +35,7 @@
             </div>
             <div class="form-group">
                 {!! Form::label('admin', 'Admin:') !!}
-                {!! Form::checkbox('admin', null, $user->admin, array('required', 'class' => 'form-control')) !!}
+                {!! Form::checkbox('admin', null, $user->admin, array('class' => 'form-control')) !!}
             </div>
             <div class="form-group">
                 {!! Form::submit('Sla user op') !!}
