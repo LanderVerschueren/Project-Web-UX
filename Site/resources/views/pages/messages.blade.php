@@ -12,20 +12,18 @@
                 <p>{{$message->message}}</p>
             </div>
         @endforeach
-
-        <form action="/message/{{$offer->id}}" method="post" enctype="multipart/form-data">
-            {{ csrf_field() }}
-            @if($error == '')
-                <label for="aantal" class="col-md-4 control-label">Aantal</label>
-            @else
-                <label for="aantal" class="col-md-4 control-label">Aantal</label>
-                <label for="aantal" class="col-md-4 control-label">{{$error}}</label>
-            @endif
-            <input id="aantal" type="text" class="form-control" name="aantal" required autofocus>
-
-            <input type="submit" value="Buy amount" name="submit">
-        </form>
     @else
         <h1>You haven't received any messages yet</h1>
     @endif
+
+    {{ Form::open(array('url' => '/message/send')) }}
+        {{ csrf_field() }}
+        {!! Form::label('sender', 'sender:') !!}
+        {!! Form::select('sender', $usersList) !!}
+
+        {!! Form::label('message', 'Message:') !!}
+        {!! Form::textarea('message') !!}
+
+        {!! Form::submit('send message') !!}
+    {{ Form::close() }}
 @endsection

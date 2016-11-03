@@ -40,6 +40,5 @@ Route::post('/editOffer/{id}', 'dashboardController@editOffer');
 Route::post('/editUser/{id}', 'dashboardController@editUser');
 
 Route::post('/buyOffer/{id}', 'koopController@buyOffer');
-Route::get('/messages', 'messageController@index');
-Route::get('/messages/{id}', 'messageController@indexWithSend');
-Route::post('/messages/{id}', 'messageController@send');
+Route::get('/messages/{id}', 'messageController@index');
+Route::post('/message/send', 'messageController@send');

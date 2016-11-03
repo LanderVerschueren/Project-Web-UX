@@ -15,13 +15,18 @@ class messageController extends Controller
     {
         $messages = DB::table('messages')->where('user_id', Auth::user()->id)->get();
         $users = User::all();
-        if($id != null)
-        {
-            $userToSend = DB::table('users')->where('id', $id)->first();
-        }
-        else{
-            $userToSend = null;
-        }
-        return view('pages.messages',['messages' => $messages, 'users' => $users, 'userToSend' => $userToSend]);
+        $usersList = User::pluck('achternaam', 'id')->except('id', Auth::user()->id);
+        return view('pages.messages',['messages' => $messages, 'users' => $users, 'usersList' => $usersList]);
+    }
+
+    public function send(Request $request)
+    {
+        $sendMessage = new Message();
+        $sendMessage->message = $request->input('message');
+        $sendMessage->user_id = $request->input('sender');
+        $sendMessage->sender_id = Auth::user()->id;
+        $sendMessage->save();
+
+        return redirect('/messages/null');
     }
 }
