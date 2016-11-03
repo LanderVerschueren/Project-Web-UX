@@ -29,8 +29,8 @@
                                         <img src="images/{{ $offer->foto }}" alt="">
                                     </div>
                                     <div class="right">
-                                        <span>prijs: {{ $offer->prijs }} euro</span>
-                                        <span>aantal: {{ $offer->aantal }}</span>
+                                        <span>Prijs: &euro;{{ $offer->prijs }}</span>
+                                        <span>Aantal: {{ $offer->aantal }}</span>
                                         <span></span>
                                     </div>
                                 </div>

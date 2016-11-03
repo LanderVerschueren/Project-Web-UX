@@ -16,8 +16,8 @@
                             <img src="images/{{ $offer->foto }}" alt="">
                         </div>
                         <div class="right">
-                            <span>prijs: {{ $offer->prijs }} euro</span>
-                            <span>aantal: {{ $offer->aantal }}</span>
+                            <span>Prijs: &euro;{{ $offer->prijs }}</span>
+                            <span>Aantal: {{ $offer->aantal }}</span>
                             <span><a href="user/{id}">{{ ucfirst($users->where('id',$offer->user_id)->first()->voornaam) . " " . ucfirst($users->where('id',$offer->user_id)->first()->achternaam) }}</a></span>
                         </div>
                     </div>

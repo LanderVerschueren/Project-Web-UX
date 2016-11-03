@@ -2,7 +2,7 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
 .temporary {
   display: block;
-  width: 100%;
+  width: 80%;
   height: auto; }
 
 /*  GENERAL  ---------------------------------------------------------------------*/
@@ -138,7 +138,7 @@ body {
 
 .offer .left img {
   display: block;
-  width: 100%;
+  width: 80%;
   height: auto; }
 
 .offer .right {
@@ -158,6 +158,9 @@ body {
 
 .offer .panel-footer {
   width: 100%; }
+
+.buy_detail {
+  height: auto !important; }
 
 /*  DASHBOARD  ---------------------------------------------------------------------*/
 .dashboard {
@@ -6049,7 +6052,7 @@ appears on the left side of the page.
   bottom: 0;
   z-index: 1000;
   /* so the menu or its navicon stays above all content */
-  background: #191818;
+  background: rgba(0, 0, 0, 0.8);
   overflow-y: auto;
   -webkit-overflow-scrolling: touch; }
 
@@ -6057,7 +6060,7 @@ appears on the left side of the page.
     All anchors inside the menu should be styled like this.
     */
 #menu a {
-  color: #999;
+  color: white;
   border: none;
   padding: 0.6em 0 0.6em 0.6em; }
 
