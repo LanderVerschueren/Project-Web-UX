@@ -35,7 +35,7 @@
             </div>
             <div class="form-group">
                 {!! Form::label('admin', 'Admin:') !!}
-                {!! Form::checkbox('admin', null, true, array('required', 'class' => 'form-control')) !!}
+                {!! Form::checkbox('admin', null, $user->admin, array('required', 'class' => 'form-control')) !!}
             </div>
             <div class="form-group">
                 {!! Form::submit('Sla user op') !!}
@@ -44,18 +44,3 @@
     </div>
 </div>
 @endsection
-<!--
-                            <div class="form-group">
-                                <label for="admin" class="col-md-4 control-label">Admin</label>
-
-                                <div class="col-md-6">
-                                    @if($user->admin == true)
-                                        <input id="admin" type="checkbox" checked="checked" class="form-control" name="admin" value="{{ $user->admin }}">
-                                    @else
-                                        <input id="admin" type="checkbox" class="form-control" name="admin" value="{{ $user->admin }}">
-                                    @endif
-                                </div>
-                            </div>
-
-                            <input type="submit" value="Save user" name="submit" id="saveUser">
-                        </form>-->
