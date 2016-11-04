@@ -49,7 +49,7 @@ $(document).ready(function() {
         });
     });
 
-    $('#pictureModal1').on('click', function(e){
+    $('.pictureModal1').click(function(){
         var imageSrc = $(this).attr('src');
         console.log(imageSrc);
         $('#modalPicture').attr('src', imageSrc);

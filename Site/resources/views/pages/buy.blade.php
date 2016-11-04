@@ -13,7 +13,7 @@
                     <h1 class="title">{{ ucfirst($offer->naam) }}</h1>
                     <div class="info_offer container_row">
                         <div class="left">
-                            <img id='pictureModal1' src="images/{{ $offer->foto }}" alt="">
+                            <img class='pictureModal1' src="images/{{ $offer->foto }}" alt="">
                         </div>
                         <div class="right">
                             <span>Prijs: &euro;{{ $offer->prijs }}</span>

@@ -12,7 +12,7 @@
             </div>
             <div class="info_offer container_row panel-body">
                 <div class="left">
-                    <img id='pictureModal1' src="images/{{ $result->foto }}" alt="">
+                    <img class='pictureModal1' src="images/{{ $result->foto }}" alt="">
                 </div>
                 <div class="right">
                     <span>prijs: {{ $result->prijs }} euro</span>

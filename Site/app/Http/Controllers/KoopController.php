@@ -27,7 +27,14 @@ class KoopController extends Controller
 
     public function detail($id) {
         $offer = Offer::find($id);
-        $buyingUser = Auth::user();
+        if(Auth::check())
+        {
+            $buyingUser = Auth::user();
+        }
+        else
+        {
+            $buyingUser = 'guest';
+        }
         $boughtFromUser = User::where('id', $offer->user_id)->first();
         $error = '';
 
@@ -37,7 +44,7 @@ class KoopController extends Controller
     public function buyOffer($id, Request $request) {
         $offer = Offer::find($id);
         $buyingUser = Auth::user();
-        $boughtFromUser = User::where('id', $offer->user_id)->first();
+        $boughtFromUser = DB::table('user')->where('id', $offer->user_id)->first();
         $error = '';
 
         $this->validate($request, [

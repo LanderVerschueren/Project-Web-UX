@@ -11,7 +11,7 @@ use App\User;
 class messageController extends Controller
 {
     //
-    public function index($id)
+    public function index()
     {
         $messages = DB::table('messages')->where('user_id', Auth::user()->id)->get();
         $users = User::all();
@@ -27,6 +27,6 @@ class messageController extends Controller
         $sendMessage->sender_id = Auth::user()->id;
         $sendMessage->save();
 
-        return redirect('/messages/null');
+        return redirect('/messages');
     }
 }

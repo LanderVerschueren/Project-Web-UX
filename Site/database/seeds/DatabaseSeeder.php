@@ -17,9 +17,9 @@ class DatabaseSeeder extends Seeder
             'achternaam' => 'verschueren',
             'password' => bcrypt('lander'),
             'email' => 'landerverschueren@gmail.com',
-            'adres' => 'lorem ipsum',
-            'woonplaats' => 'lorem',
-            'postcode' => '2000',
+            'adres' => 'warandestraat 26',
+            'woonplaats' => 'wilrijk',
+            'postcode' => '2222',
             'admin' => false,
         ]);
         DB::table('users')->insert([
@@ -27,9 +27,9 @@ class DatabaseSeeder extends Seeder
             'achternaam' => 'van roy',
             'password' => bcrypt('thomas'),
             'email' => 'thomasvanroy08@gmail.com',
-            'adres' => 'lorem ipsum',
-            'woonplaats' => 'lorem',
-            'postcode' => '2200',
+            'adres' => 'rode dries 28',
+            'woonplaats' => 'bouwel',
+            'postcode' => '2288',
             'admin' => true,
         ]);
 

@@ -25,7 +25,7 @@
                 <!-- IMAGE PREVIEW -->
                 <div class="col-md-4">
                     @if($offer->foto != null)
-                        <img id='pictureModal1' class="temporary" src="/images/{{ $offer->foto }}">
+                        <img class="pictureModal1 temporary" src="/images/{{ $offer->foto }}">
                     @else
                         <img class="temporary" src="/img/noImage.png">
                     @endif
@@ -34,7 +34,7 @@
                 </div>
                 <div class="col-md-4">
                     @if($offer->foto2 != null)
-                        <img id='pictureModal1' class="temporary" src="/images/{{ $offer->foto2 }}">
+                        <img class="pictureModal1 temporary" src="/images/{{ $offer->foto2 }}">
                     @else
                         <img class="temporary" src="/img/noImage.png">
                     @endif
@@ -43,7 +43,7 @@
                 </div>
                 <div class="col-md-4">
                     @if($offer->foto3 != null)
-                        <img id='pictureModal1' class="temporary" src="/images/{{ $offer->foto3 }}">
+                        <img class="pictureModal1 temporary" src="/images/{{ $offer->foto3 }}">
                     @else
                         <img class="temporary" src="/img/noImage.png">
                     @endif

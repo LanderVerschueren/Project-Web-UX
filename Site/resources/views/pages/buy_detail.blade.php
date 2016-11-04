@@ -14,18 +14,18 @@
 					<div class="info_offer buy_detail container_row">
 						<div class="left">
 							<div class="container_column">
-								<img id='pictureModal1' class="temporary" src="/images/{{ $offer->foto }}">
+								<img class="pictureModal1 temporary" src="/images/{{ $offer->foto }}">
 								<div class="container_row">
 									<div class="col-md-6">
 										@if($offer->foto2 != null)
-										<img id='pictureModal1' class="temporary" src="/images/{{ $offer->foto2 }}">
+										<img class="pictureModal1 temporary" src="/images/{{ $offer->foto2 }}">
 										@else
 										<img class="temporary" src="/img/noImage.png">
 										@endif
 									</div>
 									<div class="col-md-6">
 										@if($offer->foto3 != null)
-										<img id='pictureModal1' class="temporary" src="/images/{{ $offer->foto3 }}">
+										<img class="pictureModal1 temporary" src="/images/{{ $offer->foto3 }}">
 										@else
 										<img class="temporary" src="/img/noImage.png">
 										@endif
@@ -38,21 +38,23 @@
 							<span>Aantal: {{ $offer->aantal }}</span>
 							<span><a href="/user/{{ $boughtFromUser->id }}">{{ ucfirst($boughtFromUser->voornaam) . " " . ucfirst($boughtFromUser->achternaam)}}</a></span>
 							<span>
-								@if($boughtFromUser->id != $buyingUser->id)					
-								@if($error == '')
-									<label for="aantal" class="col-md-4 control-label">Aantal</label>
-								@else
-									<label for="aantal" class="col-md-4 control-label">Aantal</label>
-									<label for="aantal" class="col-md-4 control-label">{{$error}}</label>
-								@endif
-								
-								<input id="aantal" type="text" class="form-control" name="aantal" required autofocus>
+								@if($buyingUser != 'guest')
+									@if($boughtFromUser->id != $buyingUser->id)
+										@if($error == '')
+											<label for="aantal" class="col-md-4 control-label">Aantal</label>
+										@else
+											<label for="aantal" class="col-md-4 control-label">Aantal</label>
+											<label for="aantal" class="col-md-4 control-label">{{$error}}</label>
+										@endif
 
-								<div class="button-container">
-									<button type="submit">
-										<span>Koop!</span>
-									</button>
-								</div>
+										<input id="aantal" type="text" class="form-control" name="aantal" required autofocus>
+
+										<div class="button-container">
+											<button type="submit">
+												<span>Koop!</span>
+											</button>
+										</div>
+									@endif
 								@endif
 							</span>
 						</div>
