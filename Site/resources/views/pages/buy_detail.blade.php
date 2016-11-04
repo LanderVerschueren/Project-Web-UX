@@ -6,7 +6,7 @@
 <form action="/buyOffer/{{$offer->id}}" method="post" enctype="multipart/form-data">
 	{{ csrf_field() }}
 	<div class="container_row">
-		<div class="col-sm-12">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 			<div class="container_card">
 				<div class="card"></div>
 				<div class="card offer">
@@ -16,14 +16,14 @@
 							<div class="container_column">
 								<img class="pictureModal1 temporary" src="/images/{{ $offer->foto }}">
 								<div class="container_row">
-									<div class="col-md-6">
+									<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
 										@if($offer->foto2 != null)
 										<img class="pictureModal1 temporary" src="/images/{{ $offer->foto2 }}">
 										@else
 										<img class="temporary" src="/img/noImage.png">
 										@endif
 									</div>
-									<div class="col-md-6">
+									<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
 										@if($offer->foto3 != null)
 										<img class="pictureModal1 temporary" src="/images/{{ $offer->foto3 }}">
 										@else

@@ -7,7 +7,7 @@
     <span><h2>U zocht: {{ $searchTerm }}</h2></span>
     @if($searchResults->count() > 0)
         @foreach($searchResults as $result)
-        <div class="col-sm-6">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
             <div class="container_card">
                 <div class="card"></div>
                 <div class="card offer">

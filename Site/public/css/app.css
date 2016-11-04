@@ -212,7 +212,8 @@ input[type="number"]:focus {
 
 .offer .left {
   -webkit-box-flex: 3;
-  flex: 3; }
+  flex: 3;
+  padding-left: 5%; }
 
 .offer .left img {
   display: block;
@@ -224,6 +225,7 @@ input[type="number"]:focus {
   -webkit-box-flex: 9;
   flex: 9;
   padding-left: 5%;
+  padding-right: 5%;
   display: -webkit-box;
   display: flex;
   -webkit-box-orient: vertical;

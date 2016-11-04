@@ -240,6 +240,7 @@ input[type="number"]:focus {
 
 .offer .left {
   flex: 3;
+  padding-left: 5%;
 }
 
 .offer .left img {
@@ -252,6 +253,7 @@ input[type="number"]:focus {
 .offer .right {
   flex: 9;
   padding-left: 5%;
+  padding-right: 5%;
 
   display: flex;
   flex-direction: column;

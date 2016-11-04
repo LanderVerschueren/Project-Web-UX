@@ -6,7 +6,7 @@
 <div class="container_row buy_page">
     @if($offers->count() > 0)
         @foreach($offers as $offer)
-        <div class="col-sm-6">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
             <div class="container_card">
                 <div class="card"></div>
                 <div class="card offer">

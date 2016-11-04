@@ -19,7 +19,7 @@
             @foreach($offers as $offer)
                 @if($offer->user_id == Auth::user()->id)
                 <div class="container_row">
-                    <div class="col-sm-6">
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                         <div class="container_card">
                             <div class="card"></div>
                             <div class="card offer">

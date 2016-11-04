@@ -6,7 +6,7 @@
 <div class="container_column">
     @if($messages->count() > 0)
         @foreach($messages as $message)
-        <div class="col-sm-12">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <div class="container_card">
                 <div class="card"></div>
                 <div class="card offer">
@@ -23,7 +23,7 @@
         <h1>You haven't received any messages yet</h1>
     @endif
 
-    <div class="col-sm-12">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
         <div class="container_card">
             <div class="card"></div>
             <div class="card offer">
