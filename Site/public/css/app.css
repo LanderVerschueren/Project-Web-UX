@@ -2,7 +2,7 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
 .temporary {
   display: block;
-  width: 80%;
+  width: 90%;
   height: auto;
   margin: 0 auto; }
 
@@ -77,7 +77,8 @@ body {
   border-left: 3px solid #1E4C88;
   padding-left: 1%;
   margin-top: 1%;
-  margin-bottom: 1%; }
+  margin-bottom: 1%;
+  width: 100%; }
 
 div.borders {
   display: -webkit-box;
@@ -139,6 +140,10 @@ input[type="number"]:focus {
 
 .button_koop {
   margin: 1% 0 0 0 !important; }
+
+/*  NIEUW  ---------------------------------------------------------------------*/
+#input2, #input3 {
+  display: none; }
 
 /*  HOMEPAGE  ---------------------------------------------------------------------*/
 .homepage {
@@ -211,7 +216,7 @@ input[type="number"]:focus {
 
 .offer .left img {
   display: block;
-  width: 80%;
+  width: 90%;
   height: auto;
   margin: 0 auto; }
 

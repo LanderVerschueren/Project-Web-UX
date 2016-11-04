@@ -5,7 +5,7 @@ $blue: #1E4C88;
 
 .temporary {
   display: block;
-  width: 80%;
+  width: 90%;
   height: auto;
   margin: 0 auto;
 }
@@ -84,6 +84,7 @@ body {
   padding-left: 1%;
   margin-top: 1%;
   margin-bottom: 1%;
+  width: 100%;
 }
 div.borders {
   display: flex;
@@ -146,6 +147,16 @@ input[type="number"]:focus {
   margin: 1% 0 0 0!important;
 }
 
+
+
+
+
+
+
+/*  NIEUW  ---------------------------------------------------------------------*/
+#input2, #input3 {
+  display: none;
+}
 
 
 
@@ -233,7 +244,7 @@ input[type="number"]:focus {
 
 .offer .left img {
   display: block;
-  width: 80%;
+  width: 90%;
   height: auto;
   margin: 0 auto;
 }
