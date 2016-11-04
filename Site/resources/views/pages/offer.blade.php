@@ -29,9 +29,9 @@
                                         <img id="pictureModal1" src="images/{{ $offer->foto }}" alt="">
                                     </div>
                                     <div class="right">
-                                        <span>Prijs: &euro;{{ $offer->prijs }}</span>
-                                        <span>Aantal: {{ $offer->aantal }}</span>
-                                        <span></span>
+                                        <span class="borders">Prijs: &euro;{{ $offer->prijs }}</span>
+                                        <span class="borders">Aantal: {{ $offer->aantal }}</span>
+                                        <span class="borders"></span>
                                     </div>
                                 </div>
                                 <div class="button-container">

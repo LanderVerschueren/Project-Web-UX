@@ -18,7 +18,7 @@ body {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   flex-direction: row;
-  background-image: url("https://upload.wikimedia.org/wikipedia/commons/d/d1/Kew_Gardens_Palm_House,_London_-_July_2009.jpg");
+  background-image: url("../img/body_background_2.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
@@ -72,6 +72,41 @@ body {
 .modal-body a {
   width: 45%;
   height: 100%; }
+
+.right .borders {
+  border-left: 3px solid #1E4C88;
+  padding-left: 1%;
+  margin-top: 1%;
+  margin-bottom: 1%; }
+
+.right div.borders {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column; }
+
+input[type="text"] {
+  display: block;
+  margin: 0;
+  width: 100%;
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  box-shadow: none;
+  border-radius: 0;
+  padding: 10px;
+  border: none;
+  border-bottom: solid 2px #c9c9c9;
+  -webkit-transition: border 0.3s;
+  transition: border 0.3s; }
+
+input[type="text"]:focus {
+  outline: none;
+  border-bottom: solid 2px #1E4C88;
+  box-shadow: none; }
 
 /*  HOMEPAGE  ---------------------------------------------------------------------*/
 .homepage {

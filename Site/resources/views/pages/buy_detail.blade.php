@@ -34,28 +34,27 @@
 							</div>
 						</div>
 						<div class="right">
-							<span>Prijs: &euro;{{ $offer->prijs }}</span>
-							<span>Aantal: {{ $offer->aantal }}</span>
-							<span><a href="/user/{{ $boughtFromUser->id }}">{{ ucfirst($boughtFromUser->voornaam) . " " . ucfirst($boughtFromUser->achternaam)}}</a></span>
-							<span>
+							<span class="borders">Prijs: &euro;{{ $offer->prijs }}</span>
+							<span class="borders">Aantal: {{ $offer->aantal }}</span>
+							<span class="borders"><a href="/user/{{ $boughtFromUser->id }}">{{ ucfirst($boughtFromUser->voornaam) . " " . ucfirst($boughtFromUser->achternaam)}}</a></span>
+							<div class="borders">
 								@if($boughtFromUser->id != $buyingUser->id)					
 								@if($error == '')
-									<label for="aantal" class="col-md-4 control-label">Aantal</label>
+									<span for="aantal" class="control-label">Aantal</span>
 								@else
-									<label for="aantal" class="col-md-4 control-label">Aantal</label>
-									<label for="aantal" class="col-md-4 control-label">{{$error}}</label>
+									<span for="aantal" class="control-label">Aantal</span>
+									<span for="aantal" class="control-label">{{$error}}</span>
 								@endif
 								
-								<input id="aantal" type="text" class="form-control" name="aantal" required autofocus>
-
-								<div class="button-container">
-									<button type="submit">
-										<span>Koop!</span>
-									</button>
-								</div>
+								<input id="aantal" type="text" class="form-control" name="aantal" value="{{ $offer->aantal }}" required>
 								@endif
-							</span>
+							</div>
 						</div>
+					</div>
+					<div class="button-container">
+						<button type="submit">
+							<span>Koop!</span>
+						</button>
 					</div>
 				</div> 
 			</div> 

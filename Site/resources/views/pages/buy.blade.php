@@ -16,9 +16,9 @@
                             <img id='pictureModal1' src="images/{{ $offer->foto }}" alt="">
                         </div>
                         <div class="right">
-                            <span>Prijs: &euro;{{ $offer->prijs }}</span>
-                            <span>Aantal: {{ $offer->aantal }}</span>
-                            <span><a href="user/{{$offer->user_id}}">{{ ucfirst($users->where('id',$offer->user_id)->first()->voornaam) . " " . ucfirst($users->where('id',$offer->user_id)->first()->achternaam) }}</a></span>
+                            <span class="borders">Prijs: &euro;{{ $offer->prijs }}</span>
+                            <span class="borders">Aantal: {{ $offer->aantal }}</span>
+                            <span class="borders"><a href="user/{{$offer->user_id}}">{{ ucfirst($users->where('id',$offer->user_id)->first()->voornaam) . " " . ucfirst($users->where('id',$offer->user_id)->first()->achternaam) }}</a></span>
                         </div>
                     </div>
                     <div class="button-container">
