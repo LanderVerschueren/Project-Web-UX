@@ -145,3 +145,12 @@
     </div>
   </div>
 </div>
+
+<div class="modal fade" id="pictureModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="card"></div>
+    <div class="card">
+          <img id="modalPicture" class="temporary" src="">
+    </div>
+  </div>
+</div>

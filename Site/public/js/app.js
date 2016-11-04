@@ -49,6 +49,14 @@ $(document).ready(function() {
         });
     });
 
+    $('#pictureModal1').on('click', function(e){
+        var imageSrc = $(this).attr('src');
+        console.log(imageSrc);
+        $('#modalPicture').attr('src', imageSrc);
+        $('#pictureModal').modal();
+        console.log('foto click');
+    });
+
     $('#dashboard').click(function() {
         $('#dashboardModal').modal();
         console.log("login click");

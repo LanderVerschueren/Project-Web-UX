@@ -13,12 +13,12 @@
                     <h1 class="title">{{ ucfirst($offer->naam) }}</h1>
                     <div class="info_offer container_row">
                         <div class="left">
-                            <img src="images/{{ $offer->foto }}" alt="">
+                            <img id='pictureModal1' src="images/{{ $offer->foto }}" alt="">
                         </div>
                         <div class="right">
                             <span>Prijs: &euro;{{ $offer->prijs }}</span>
                             <span>Aantal: {{ $offer->aantal }}</span>
-                            <span><a href="user/{id}">{{ ucfirst($users->where('id',$offer->user_id)->first()->voornaam) . " " . ucfirst($users->where('id',$offer->user_id)->first()->achternaam) }}</a></span>
+                            <span><a href="user/{{$offer->user_id}}">{{ ucfirst($users->where('id',$offer->user_id)->first()->voornaam) . " " . ucfirst($users->where('id',$offer->user_id)->first()->achternaam) }}</a></span>
                         </div>
                     </div>
                     <div class="button-container">

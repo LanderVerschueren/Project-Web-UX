@@ -14,18 +14,18 @@
 					<div class="info_offer buy_detail container_row">
 						<div class="left">
 							<div class="container_column">
-								<img class="temporary" src="/images/{{ $offer->foto }}">
+								<img id='pictureModal1' class="temporary" src="/images/{{ $offer->foto }}">
 								<div class="container_row">
 									<div class="col-md-6">
 										@if($offer->foto2 != null)
-										<img class="temporary" src="/images/{{ $offer->foto2 }}">
+										<img id='pictureModal1' class="temporary" src="/images/{{ $offer->foto2 }}">
 										@else
 										<img class="temporary" src="/img/noImage.png">
 										@endif
 									</div>
 									<div class="col-md-6">
 										@if($offer->foto3 != null)
-										<img class="temporary" src="/images/{{ $offer->foto3 }}">
+										<img id='pictureModal1' class="temporary" src="/images/{{ $offer->foto3 }}">
 										@else
 										<img class="temporary" src="/img/noImage.png">
 										@endif

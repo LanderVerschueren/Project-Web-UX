@@ -12,9 +12,11 @@
             @if($user->admin == true)
                 <p>Deze user is admin!</p>
             @endif
+            @if(Auth::user()->id != $user->id)
             <button>
                 <a href="/messages/{{$user->id}}">Send message</a>
             </button>
+            @endif
         </div>
     </div>
 @endsection
