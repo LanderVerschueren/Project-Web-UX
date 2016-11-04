@@ -79,13 +79,13 @@ body {
   height: 100%;
 }
 
-.right .borders {
+.borders {
   border-left: 3px solid $blue;
   padding-left: 1%;
   margin-top: 1%;
   margin-bottom: 1%;
 }
-.right div.borders {
+div.borders {
   display: flex;
   flex-direction: column;
 }
@@ -109,6 +109,48 @@ input[type="text"]:focus {
   border-bottom: solid 2px $blue;
   box-shadow: none;
 }
+input[type="number"] {
+  display: block;
+  margin: 0;
+  width: 100%;
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  appearance: none;
+  box-shadow: none;
+  border-radius: 0;
+  padding: 10px;
+  border: none;
+  border-bottom: solid 2px #c9c9c9;
+  transition: border 0.3s;
+}
+input[type="number"]:focus {
+  outline: none;
+  border-bottom: solid 2px $blue;
+  box-shadow: none;
+}
+
+
+
+
+
+
+
+/*  MESSAGES  ---------------------------------------------------------------------*/
+.messages {
+  width: 100%;
+  padding: 2%;
+  align-items: flex-start;
+}
+
+.button_koop {
+  margin: 1% 0 0 0!important;
+}
+
+
+
+
+
+
 
 
 /*  HOMEPAGE  ---------------------------------------------------------------------*/
@@ -573,6 +615,10 @@ Hides the menu at `48em`, but modify this based on your app's needs.
   .container-right {
     width: 100%;
   }
+
+  .offer-container{
+    width: 100%;
+  }
 }
 
 @media (max-width: 48em) {
@@ -608,11 +654,9 @@ Hides the menu at `48em`, but modify this based on your app's needs.
 }
 .container_card.active .card:first-child {
   background: #f2f2f2;
-  margin: 0 15px;
 }
 .container_card.active .card:nth-child(2) {
   background: #fafafa;
-  margin: 0 10px;
 }
 .container_card.active .card.alt {
   top: 20px;
@@ -694,7 +738,7 @@ Hides the menu at `48em`, but modify this based on your app's needs.
   position: relative;
   background: #ffffff;
   border-radius: 5px;
-  padding: 20px 0 10px 0;
+  padding: 10px 0 10px 0;
   box-sizing: border-box;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   -webkit-transition: .3s ease;

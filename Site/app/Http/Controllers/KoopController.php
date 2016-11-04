@@ -53,13 +53,13 @@ class KoopController extends Controller
             $offer->save();
 
             $messageToSeller = new Message();
-            $messageToSeller->message = $buyingUser->voornaam . ' ' . $buyingUser->achternaam . ' heeft net ' . $userWantsAmount . ' stuks van jou ' . $offer->naam . ' besteld.';
+            $messageToSeller->message = ucfirst($buyingUser->voornaam) . ' ' . ucfirst($buyingUser->achternaam) . ' heeft net ' . $userWantsAmount . ' stuks van jou ' . $offer->naam . ' besteld.';
             $messageToSeller->user_id = $boughtFromUser->id;
             $messageToSeller->sender_id = $buyingUser->id;
             $messageToSeller->save();
 
             $messageToBuyer = new Message();
-            $messageToBuyer->message = 'Je hebt net ' . $userWantsAmount . ' ' . $offer->naam . ' besteld van ' . $boughtFromUser->voornaam . ' ' . $boughtFromUser->achternaam;
+            $messageToBuyer->message = 'Je hebt net ' . $userWantsAmount . ' ' . $offer->naam . ' besteld van ' . ucfirst($boughtFromUser->voornaam) . ' ' . ucfirst($boughtFromUser->achternaam);
             $messageToBuyer->user_id = $buyingUser->id;
             $messageToBuyer->sender_id = $boughtFromUser->id;
             $messageToBuyer->save();

@@ -73,13 +73,13 @@ body {
   width: 45%;
   height: 100%; }
 
-.right .borders {
+.borders {
   border-left: 3px solid #1E4C88;
   padding-left: 1%;
   margin-top: 1%;
   margin-bottom: 1%; }
 
-.right div.borders {
+div.borders {
   display: -webkit-box;
   display: flex;
   -webkit-box-orient: vertical;
@@ -107,6 +107,38 @@ input[type="text"]:focus {
   outline: none;
   border-bottom: solid 2px #1E4C88;
   box-shadow: none; }
+
+input[type="number"] {
+  display: block;
+  margin: 0;
+  width: 100%;
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  box-shadow: none;
+  border-radius: 0;
+  padding: 10px;
+  border: none;
+  border-bottom: solid 2px #c9c9c9;
+  -webkit-transition: border 0.3s;
+  transition: border 0.3s; }
+
+input[type="number"]:focus {
+  outline: none;
+  border-bottom: solid 2px #1E4C88;
+  box-shadow: none; }
+
+/*  MESSAGES  ---------------------------------------------------------------------*/
+.messages {
+  width: 100%;
+  padding: 2%;
+  -webkit-box-align: start;
+  align-items: flex-start; }
+
+.button_koop {
+  margin: 1% 0 0 0 !important; }
 
 /*  HOMEPAGE  ---------------------------------------------------------------------*/
 .homepage {
@@ -6233,6 +6265,8 @@ Hides the menu at `48em`, but modify this based on your app's needs.
     padding-bottom: 2.5em; }
   .container-left,
   .container-right {
+    width: 100%; }
+  .offer-container {
     width: 100%; } }
 
 @media (max-width: 48em) {
@@ -6254,12 +6288,10 @@ Hides the menu at `48em`, but modify this based on your app's needs.
   width: 100%; }
 
 .container_card.active .card:first-child {
-  background: #f2f2f2;
-  margin: 0 15px; }
+  background: #f2f2f2; }
 
 .container_card.active .card:nth-child(2) {
-  background: #fafafa;
-  margin: 0 10px; }
+  background: #fafafa; }
 
 .container_card.active .card.alt {
   top: 20px;
@@ -6340,7 +6372,7 @@ Hides the menu at `48em`, but modify this based on your app's needs.
   position: relative;
   background: #ffffff;
   border-radius: 5px;
-  padding: 20px 0 10px 0;
+  padding: 10px 0 10px 0;
   box-sizing: border-box;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   -webkit-transition: .3s ease;

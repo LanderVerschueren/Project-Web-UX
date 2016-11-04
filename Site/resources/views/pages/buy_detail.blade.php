@@ -46,7 +46,7 @@
 									<span for="aantal" class="control-label">{{$error}}</span>
 								@endif
 								
-								<input id="aantal" type="text" class="form-control" name="aantal" value="{{ $offer->aantal }}" required>
+								<input id="aantal" type="number" class="form-control" name="aantal" value="{{ $offer->aantal }}" max="{{ $offer->aantal }}" min="0" required>
 								@endif
 							</div>
 						</div>

@@ -52,7 +52,7 @@
             <input id="achternaam" type="text" name="achternaam" required autofocus/>
             <label for="achternaam">Achternaam</label>
             <div class="bar"></div>
-            @if ($errors->has('email'))
+            @if ($errors->has('achternaam'))
               <span class="help-block">
                 <strong>{{ $errors->first('achternaam') }}</strong>
               </span>
@@ -60,13 +60,14 @@
           </div>
           <div class="input-container">
             <input id="email" type="email" name="email" required/>
-            <label for="email">E-mail Adres</label>
+            <label for="email">
+              E-mail Adres
+              @if ($errors->has('email'))
+                  <i class="fa fa-exclamation" aria-hidden="true"></i>
+              @endif
+            </label>
             <div class="bar"></div>
-            @if ($errors->has('email'))
-              <span class="help-block">
-                <strong>{{ $errors->first('email') }}</strong>
-              </span>
-            @endif
+            
           </div>
           <div class="input-container">
             <input id="adres" type="text" name="adres" required autofocus>
