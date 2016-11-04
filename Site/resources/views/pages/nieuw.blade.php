@@ -58,19 +58,10 @@
 
 
                                 <input type="submit" value="Upload offer" name="submit" id="nieuwSubmit">
-
-
-                            </form>
-                            
+                            </form>                            
                     </div>
                 </div>
             </div>
         </div>
     </div>
 @endsection
-
-<!--
-{!! Form::open([ 'url' => 'nieuw' ]) !!}
-                                //
-                            {!! Form::close() !!}
--->
