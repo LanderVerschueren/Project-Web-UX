@@ -184,7 +184,9 @@ img:hover {
   cursor: pointer;
 }
 
-
+.register {
+  color: white!important;
+}
 
 
 
@@ -1133,7 +1135,7 @@ Hides the menu at `48em`, but modify this based on your app's needs.
 .card.alt .title .close {
   cursor: pointer;
   position: absolute;
-  top: 0;
+  top: -15px;
   right: 60px;
   display: inline;
   color: #ffffff;

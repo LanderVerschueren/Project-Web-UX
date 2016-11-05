@@ -33,7 +33,7 @@
       </div>
       <div class="card alt">
         <div class="toggle"></div>
-        <h1 class="title">Registreren
+        <h1 class="title register">Registreren
           <div class="close"></div>
         </h1>
         <div class="button-container">
