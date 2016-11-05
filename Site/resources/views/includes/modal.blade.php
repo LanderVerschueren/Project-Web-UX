@@ -36,93 +36,13 @@
         <h1 class="title">Registreren
           <div class="close"></div>
         </h1>
-        <form role="form" method="POST" action="{{ url('/register') }}">
-          <input type="hidden" name="_token" value="{{ csrf_token() }}">
-          <div class="input-container">
-            <input id="voornaam" type="text" name="voornaam" required autofocus/>
-            <label for="voornaam">Voornaam</label>
-            <div class="bar"></div>
-            @if ($errors->has('voornaam'))
-              <span class="help-block">
-                <strong>{{ $errors->first('voornaam') }}</strong>
-              </span>
-            @endif
+        <div class="button-container">
+          <div class="container_row">
+            <div class="button">
+            <a href="/register">Registreer</a>
+            </div>
           </div>
-          <div class="input-container">
-            <input id="achternaam" type="text" name="achternaam" required autofocus/>
-            <label for="achternaam">Achternaam</label>
-            <div class="bar"></div>
-            @if ($errors->has('achternaam'))
-              <span class="help-block">
-                <strong>{{ $errors->first('achternaam') }}</strong>
-              </span>
-            @endif
-          </div>
-          <div class="input-container">
-            <input id="email" type="email" name="email" required/>
-            <label for="email">
-              E-mail Adres
-              @if ($errors->has('email'))
-                  <i class="fa fa-exclamation" aria-hidden="true"></i>
-              @endif
-            </label>
-            <div class="bar"></div>
-            
-          </div>
-          <div class="input-container">
-            <input id="adres" type="text" name="adres" required autofocus>
-            <label for="adres">Straat + Nummer</label>
-            <div class="bar"></div>
-            @if ($errors->has('adres'))
-              <span class="help-block">
-                <strong>{{ $errors->first('adres') }}</strong>
-              </span>
-            @endif
-          </div>
-          <div class="input-container">
-            <input id="woonplaats" type="text" name="woonplaats" required autofocus>
-            <label for="woonplaats">Woonplaats</label>
-            <div class="bar"></div>
-            @if ($errors->has('woonplaats'))
-              <span class="help-block">
-                <strong>{{ $errors->first('woonplaats') }}</strong>
-              </span>
-            @endif
-          </div>
-          <div class="input-container">
-            <input id="postcode" type="text" name="postcode" required autofocus>
-            <label for="postcode">Postcode</label>
-            <div class="bar"></div>
-            @if ($errors->has('postcode'))
-              <span class="help-block">
-                <strong>{{ $errors->first('postcode') }}</strong>
-              </span>
-            @endif
-          </div>
-          <div class="input-container">
-            <input id="password" type="password" name="password" required>
-            <label for="password">Paswoord</label>
-            <div class="bar"></div>
-            @if ($errors->has('password'))
-              <span class="help-block">
-                <strong>{{ $errors->first('password') }}</strong>
-              </span>
-            @endif
-          </div>
-          <div class="input-container">
-            <input id="password-confirm" type="password" name="password_confirmation" required>
-            <label for="password-confirm">Bevestig Paswoord</label>
-            <div class="bar"></div>
-            @if ($errors->has('password_confirmation'))
-              <span class="help-block">
-                <strong>{{ $errors->first('password_confirmation') }}</strong>
-              </span>
-            @endif
-          </div>
-          <div class="button-container">
-            <button><span>Next</span></button>
-          </div>
-        </form>
+        </div>
       </div>
     </div>
   </div>
