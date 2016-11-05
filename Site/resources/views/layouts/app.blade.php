@@ -28,26 +28,13 @@
   
   @include('includes.modal')
 
-    <!-- Scripts -->
-          <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>    
-    <script src="https://use.fontawesome.com/45e46cc7cf.js"></script>
-    <script type="text/javascript" src="/js/ripples.js"></script>
-    <script src="/js/ui.js"></script>
-    <script type="text/javascript">
-    @if (count($errors) > 0)
-      var modal = document.getElementById('loginModal');
-      console.log(modal);
-      modal.className += ' in';
-    @endif
+  <script type="text/javascript">
     $(document).ready(function() {
       @if( count($errors) > 0 )
-        $('#loginModal').modal();
+      $('#loginModal').modal();
+      console.log('error trigger');
       @endif
-      console.log('test');
-
     });
-    </script>
-
-    <script src="/js/app.js"></script>
+  </script>
 </body>
 </html>

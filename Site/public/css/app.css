@@ -2,7 +2,7 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
 .temporary {
   display: block;
-  width: 90%;
+  width: 80%;
   height: auto;
   margin: 0 auto; }
 
@@ -23,7 +23,15 @@ body {
   background-size: cover;
   background-position: bottom;
   background-attachment: fixed;
-  min-width: 315px; }
+  min-width: 315px;
+  font-family: Open Sans, sans-serif !important; }
+
+h1 {
+  font-family: Oswald, sans-serif !important;
+  color: #1E4C88 !important; }
+
+h2 {
+  font-family: Roboto, sans-serif !important; }
 
 #main {
   width: 80%;
@@ -176,6 +184,9 @@ input[type="email"]:focus {
   border-bottom: solid 2px #1E4C88;
   box-shadow: none; }
 
+img:hover {
+  cursor: pointer; }
+
 /*  MESSAGES  ---------------------------------------------------------------------*/
 .messages {
   width: 100%;
@@ -217,10 +228,11 @@ input[type="email"]:focus {
 .container-left a,
 .container-right a {
   width: 100%;
-  text-align: center; }
+  text-align: center;
+  font-family: Roboto, sans-serif; }
 
-.container-left a h1,
-.container-right a h1 {
+.container-left a h2,
+.container-right a h2 {
   color: black; }
 
 .container-left a:hover,
@@ -259,7 +271,7 @@ input[type="email"]:focus {
 
 .offer .left img {
   display: block;
-  width: 90%;
+  width: 80%;
   height: auto;
   margin: 0 auto; }
 
@@ -6121,7 +6133,8 @@ The content `<div>` is where all your content goes.
   margin: 0 auto;
   position: absolute;
   bottom: 0;
-  width: 100%; }
+  width: 100%;
+  font-family: Open Sans, sans-serif; }
 
 .header form input {
   padding: 5px 5px 5px 15px;
@@ -6148,7 +6161,8 @@ The content `<div>` is where all your content goes.
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   box-sizing: border-box;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  font-family: Oswald, sans-serif; }
 
 .header h2 {
   font-weight: 300;
@@ -6193,7 +6207,8 @@ appears on the left side of the page.
 #menu .pure-menu,
 #menu .pure-menu ul {
   border: none;
-  background: transparent; }
+  background: transparent;
+  font-family: Open Sans, sans-serif; }
 
 /*
     Add that light border to separate items into groups.
@@ -6542,7 +6557,6 @@ Hides the menu at `48em`, but modify this based on your app's needs.
   text-align: center; }
 
 .button-container {
-  margin: 1% auto 0% auto;
   text-align: center;
   left: 0;
   opacity: 1;

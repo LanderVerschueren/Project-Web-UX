@@ -42,3 +42,4 @@ Route::post('/editUser/{id}', 'dashboardController@editUser');
 Route::post('/buyOffer/{id}', 'koopController@buyOffer');
 Route::get('/messages', 'messageController@index');
 Route::post('/message/send', 'messageController@send');
+Route::get('login_redirect', 'HomeController@login');

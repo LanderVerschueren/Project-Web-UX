@@ -9,7 +9,7 @@
             <div class="container_card">
                 <div class="card"></div>
                 <div class="card offer">
-                    <h1 class="title">Offer toevoegen</h1>
+                    <h2 class="title">Offer toevoegen</h2>
                     <div class="container_row">
                         <div class="left">
                             <div class="container_column">

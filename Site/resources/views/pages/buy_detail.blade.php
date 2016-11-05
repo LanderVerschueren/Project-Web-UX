@@ -10,7 +10,7 @@
 			<div class="container_card">
 				<div class="card"></div>
 				<div class="card offer">
-					<h1 class="title">{{ ucfirst($offer->naam) }}</h1>
+					<h2 class="title">{{ ucfirst($offer->naam) }}</h2>
 					<div class="info_offer buy_detail container_row">
 						<div class="left">
 							<div class="container_column">
@@ -59,7 +59,7 @@
 								</button>
 							</div>
 								@endif
-								@endif
+							@endif
 						</div>
 					</div>
 

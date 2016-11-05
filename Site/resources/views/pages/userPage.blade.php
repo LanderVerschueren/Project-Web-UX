@@ -6,7 +6,7 @@
 <div class="container_column">
     <div class="card"></div>
     <div class="card offer">
-        <h1 class="title">{{ ucfirst($user->voornaam)  . " " . ucfirst($user->achternaam) }}</h1>
+        <h2 class="title">{{ ucfirst($user->voornaam)  . " " . ucfirst($user->achternaam) }}</h2>
         <div class="info_offer container_row">
             <span class="borders">{{ $user->email }}</span>
             <span class="borders">{{ $user->adres . ', ' . $user->woonplaats . " " . $user->postcode }}</span>

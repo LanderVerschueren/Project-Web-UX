@@ -2,10 +2,14 @@ $base_color: #73881E;
 $secon_color: #B28E48;
 $blue: #1E4C88;
 
+$main: Oswald, sans-serif;
+$secondary: Roboto, sans-serif;
+$third: Open Sans, sans-serif;
+
 
 .temporary {
   display: block;
-  width: 90%;
+  width: 80%;
   height: auto;
   margin: 0 auto;
 }
@@ -28,6 +32,15 @@ body {
   background-position: bottom;
   background-attachment: fixed;
   min-width: 315px;
+  font-family: $third!important
+}
+
+h1 {
+  font-family: $main!important;
+  color: $blue!important;
+}
+h2 {
+  font-family: $secondary!important;
 }
 
 #main {
@@ -168,7 +181,9 @@ input[type="email"]:focus {
   border-bottom: solid 2px $blue;
   box-shadow: none;
 }
-
+img:hover {
+  cursor: pointer;
+}
 
 
 
@@ -233,8 +248,9 @@ input[type="email"]:focus {
   a {
     width: 100%;
     text-align: center;
+    font-family: $secondary;
   }
-  a h1 {
+  a h2 {
     color: black;
   }
   a:hover {
@@ -279,7 +295,7 @@ input[type="email"]:focus {
 
 .offer .left img {
   display: block;
-  width: 90%;
+  width: 80%;
   height: auto;
   margin: 0 auto;
 }
@@ -412,6 +428,7 @@ The content `<div>` is where all your content goes.
   position: absolute;
   bottom: 0;
   width: 100%;
+  font-family: $third;
 }
 
 .header form input {
@@ -442,6 +459,7 @@ The content `<div>` is where all your content goes.
   border-bottom-right-radius: 5px;
   box-sizing: border-box;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  font-family: $main;
 }
 
 .header h2 {
@@ -498,6 +516,7 @@ appears on the left side of the page.
 #menu .pure-menu ul {
   border: none;
   background: transparent;
+  font-family: $third;
 }
 
 
@@ -913,7 +932,6 @@ Hides the menu at `48em`, but modify this based on your app's needs.
   text-align: center;
 }
 .button-container {
-  margin: 1% auto 0% auto;
   text-align: center;
   left: 0;
   opacity: 1;

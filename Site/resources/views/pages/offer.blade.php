@@ -23,7 +23,7 @@
                         <div class="container_card">
                             <div class="card"></div>
                             <div class="card offer">
-                                <h1 class="title">{{ ucfirst($offer->naam) }}</h1>
+                                <h2 class="title">{{ ucfirst($offer->naam) }}</h2>
                                 <div class="info_offer container_row">
                                     <div class="left">
                                         <img class="pictureModal1" src="images/{{ $offer->foto }}" alt="">
