@@ -7,7 +7,7 @@
 <div id="menu">
     <div class="pure-menu">
         <a class="pure-menu-heading" href="/">
-            <img src="/img/garden.png" alt="" class="pure-img">
+            <img src="/img/logo.png" alt="" class="pure-img">
         </a>
 
         <ul class="pure-menu-list">
