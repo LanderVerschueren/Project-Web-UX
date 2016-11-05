@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Buy detail')
+@section('title', 'Kopen')
 
 @section('content')
 <form action="/buyOffer/{{$offer->id}}" method="post" enctype="multipart/form-data">
