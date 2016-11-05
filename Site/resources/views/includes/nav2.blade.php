@@ -7,14 +7,14 @@
 <div id="menu">
     <div class="pure-menu">
         <a class="pure-menu-heading" href="/">
-            <img src="/img/garden.png" alt="" class="pure-img">
+            <img src="/img/logo.png" alt="" class="pure-img">
         </a>
 
         <ul class="pure-menu-list">
             @if ( Auth::guest() )
             <li class="pure-menu-item"><a href="#" id="login" class="pure-menu-link">Inloggen</a></li>
             @else
-            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Hallo {{ ucfirst( Auth::user()->voornaam ) }}</a></li>
+            <li class="pure-menu-item"><a href="/" class="pure-menu-link">Hallo {{ ucfirst( Auth::user()->voornaam ) }}</a></li>
             <li class="pure-menu-item"><a href="/messages" class="pure-menu-link">Messages</a></li>
             @if(Auth::user()->isadmin())
             <li class="pure-menu-item"><a href="#" class="pure-menu-link" id="dashboard">Dashboard</a></li>

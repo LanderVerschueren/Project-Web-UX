@@ -27,6 +27,7 @@ body {
   background-size: cover;
   background-position: bottom;
   background-attachment: fixed;
+  min-width: 315px;
 }
 
 #main {
@@ -180,10 +181,6 @@ input[type="email"]:focus {
   align-items: flex-start;
 }
 
-.button_koop {
-  margin: 1% 0 0 0!important;
-}
-
 
 
 
@@ -276,7 +273,7 @@ input[type="email"]:focus {
 }
 
 .offer .left {
-  flex: 3;
+  flex: 4;
   padding-left: 5%;
 }
 
@@ -288,7 +285,7 @@ input[type="email"]:focus {
 }
 
 .offer .right {
-  flex: 9;
+  flex: 8;
   padding-left: 5%;
   padding-right: 5%;
 
@@ -524,15 +521,6 @@ appears on the left side of the page.
 }
 
 
-/*
-    This styles the selected menu item `<li>`.
-    */
-
-#menu .pure-menu-selected,
-#menu .pure-menu-heading {
-  background: #1f8dd6;
-}
-
 
 /*
         This styles a link within a selected menu item `<li>`.
@@ -657,19 +645,28 @@ Hides the menu at `48em`, but modify this based on your app's needs.
   }
   .container-left,
   .container-right {
-    width: 100%;
+    width: 95%;
   }
 
   .offer-container{
-    width: 100%;
-  }
-  .header h1 {
-    font-size: 2.5em;
+    width: 95%;
   }
   .header form {
     width: 95%;
     left: 0;
     right: 0;
+  }
+  .homepage .container-left {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 5px;
+    height: 50%;
+  }
+  .homepage .container-right {
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    height: 50%;
   }
 }
 
@@ -685,6 +682,32 @@ Hides the menu at `48em`, but modify this based on your app's needs.
   }
   .menu-link {
     padding: 1.6em 1.6em;
+  }
+  .offer .left, .offer .right {
+    flex: 6;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .offer .left {
+    min-width: 150px;
+  }
+  .offer .info_offer {
+    height: auto;
+  }
+  #message {
+    width: 100%;
+  }  
+  .header h1 {
+    font-size: 1.8em;
+    padding-left: 10%;
+    padding-right: 10%;
+  }  
+  .card .title {
+    font-size: 20px!important;
+  }
+  .button-container .container_row .button, .button-container button {
+    font-size: 20px!important;
   }
 }
 
@@ -887,11 +910,10 @@ Hides the menu at `48em`, but modify this based on your app's needs.
   right: 50%;
 }
 .card .button-container {
-  margin: 0 60px;
   text-align: center;
 }
 .button-container {
-  margin: 0 auto 1% auto;
+  margin: 1% auto 0% auto;
   text-align: center;
   left: 0;
   opacity: 1;
