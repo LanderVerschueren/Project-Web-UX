@@ -18,10 +18,9 @@ body {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   flex-direction: row;
-  background-image: url("../img/body_background_2.png");
+  background-image: url("../img/body_background_4.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: bottom;
   background-attachment: fixed;
   min-width: 315px;
   font-family: Open Sans, sans-serif !important; }
@@ -213,15 +212,21 @@ img:hover {
   display: flex;
   -webkit-box-pack: center;
   justify-content: center;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out; }
+
+.container-left:hover, .container-right:hover {
+  -webkit-transform: scale(1.005);
+  transform: scale(1.005); }
 
 .homepage .container-left {
-  background-image: url("http://farm3.staticflickr.com/2875/9069037713_1752f5daeb.jpg");
+  background-image: url("../img/give_3.jpg");
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px; }
 
 .homepage .container-right {
-  background-image: url("http://farm3.staticflickr.com/2813/9069585985_80da8db54f.jpg");
+  background-image: url("../img/market_4.jpg");
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px; }
 
@@ -233,7 +238,11 @@ img:hover {
 
 .container-left a h2,
 .container-right a h2 {
-  color: black; }
+  color: white;
+  font-size: 60px;
+  background-color: rgba(150, 150, 150, 0.8);
+  margin: 0 !important;
+  padding: 3% 0; }
 
 .container-left a:hover,
 .container-right a:hover {
