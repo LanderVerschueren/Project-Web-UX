@@ -54,12 +54,10 @@ $(document).ready(function() {
         console.log(imageSrc);
         $('#modalPicture').attr('src', imageSrc);
         $('#pictureModal').modal();
-        console.log('foto click');
     });
 
     $('#dashboard').click(function() {
         $('#dashboardModal').modal();
-        console.log("login click");
     });
 
     $('#input1').on('change',function(){

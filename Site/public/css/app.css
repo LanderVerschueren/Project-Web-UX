@@ -131,6 +131,50 @@ input[type="number"]:focus {
   border-bottom: solid 2px #1E4C88;
   box-shadow: none; }
 
+input[type="password"] {
+  display: block;
+  margin: 0;
+  width: 100%;
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  box-shadow: none;
+  border-radius: 0;
+  padding: 10px;
+  border: none;
+  border-bottom: solid 2px #c9c9c9;
+  -webkit-transition: border 0.3s;
+  transition: border 0.3s; }
+
+input[type="password"]:focus {
+  outline: none;
+  border-bottom: solid 2px #1E4C88;
+  box-shadow: none; }
+
+input[type="email"] {
+  display: block;
+  margin: 0;
+  width: 100%;
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  box-shadow: none;
+  border-radius: 0;
+  padding: 10px;
+  border: none;
+  border-bottom: solid 2px #c9c9c9;
+  -webkit-transition: border 0.3s;
+  transition: border 0.3s; }
+
+input[type="email"]:focus {
+  outline: none;
+  border-bottom: solid 2px #1E4C88;
+  box-shadow: none; }
+
 /*  MESSAGES  ---------------------------------------------------------------------*/
 .messages {
   width: 100%;
@@ -6204,18 +6248,13 @@ small screens.
   top: 0;
   left: 0;
   /* "#menu width" */
-  background: #000;
-  background: rgba(0, 0, 0, 0.7);
-  font-size: 10px;
+  font-size: 14px;
   /* change this value to increase/decrease button size */
   z-index: 10;
   width: 5em;
   height: auto;
-  padding: 2.1em 1.6em; }
-
-.menu-link:hover,
-.menu-link:focus {
-  background: #000; }
+  padding: 2.1em 1.6em 2.1em 1.6em;
+  min-height: 50px; }
 
 .menu-link span {
   position: relative;
@@ -6224,7 +6263,7 @@ small screens.
 .menu-link span,
 .menu-link span:before,
 .menu-link span:after {
-  background-color: #fff;
+  background-color: black;
   width: 100%;
   height: 0.2em; }
 
@@ -6267,7 +6306,7 @@ Hides the menu at `48em`, but modify this based on your app's needs.
     position: relative;
     left: 200px; }
   #main {
-    width: 95%; }
+    width: 100%; }
   .content {
     padding-bottom: 2.5em; }
   .container-left,
@@ -6276,7 +6315,11 @@ Hides the menu at `48em`, but modify this based on your app's needs.
   .offer-container {
     width: 100%; }
   .header h1 {
-    font-size: 2.5em; } }
+    font-size: 2.5em; }
+  .header form {
+    width: 95%;
+    left: 0;
+    right: 0; } }
 
 @media (max-width: 48em) {
   /* Only apply this when the window is small. Otherwise, the following
@@ -6288,7 +6331,9 @@ Hides the menu at `48em`, but modify this based on your app's needs.
   .homepage {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    flex-direction: column; } }
+    flex-direction: column; }
+  .menu-link {
+    padding: 1.6em 1.6em; } }
 
 /* -- Modal Login adn Register ------------------------------------- */
 /* Container */
@@ -6309,7 +6354,7 @@ Hides the menu at `48em`, but modify this based on your app's needs.
   min-width: 100%;
   height: auto;
   border-radius: 5px;
-  padding: 60px 0 40px;
+  padding: 60px 0 80px;
   overflow: hidden; }
 
 .container_card.active .card.alt .toggle {
@@ -6704,6 +6749,11 @@ Hides the menu at `48em`, but modify this based on your app's needs.
   background: #ffffff;
   border-color: #ffffff; }
 
+.card.alt .button-container .container_row .button {
+  width: 100%;
+  background: #ffffff;
+  border-color: #ffffff; }
+
 .card.alt .button-container button span {
   color: #1E4C88; }
 
@@ -6711,6 +6761,15 @@ Hides the menu at `48em`, but modify this based on your app's needs.
   background: rgba(255, 255, 255, 0.9); }
 
 .card.alt .button-container button:active:before, .card.alt .button-container button:focus:before {
+  display: none; }
+
+.card.alt .button-container .container_row .button a {
+  color: #1E4C88; }
+
+.card.alt .button-container .container_row .button:hover {
+  background: rgba(255, 255, 255, 0.9); }
+
+.card.alt .button-container .container_row .button:active:before, .card.alt .button-container .container_row .button:focus:before {
   display: none; }
 
 /* Keyframes */
